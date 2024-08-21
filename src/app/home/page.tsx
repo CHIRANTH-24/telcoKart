@@ -1,5 +1,6 @@
 'use client';
 import Footer from '@/components/Footer'
+import MainCategory from '@/components/MainCategory';
 import Nav from '@/components/Nav'
 import PrimeBrand from '@/components/PrimeBrand';
 import Show from '@/components/Show';
@@ -15,6 +16,7 @@ function page() {
   return (
     <>
       <Nav />
+      <MainCategory />
       <Show images={images} />
       <Softwarecard />
       <Show images={images} />
