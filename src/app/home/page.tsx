@@ -6,6 +6,7 @@ import PrimeBrand from '@/components/PrimeBrand';
 import Show from '@/components/Show';
 import Softwarecard from '@/components/Softwarecard';
 import Subscribe from '@/components/Subscribe';
+
 import React from 'react'
 
 function page() {
