@@ -14,20 +14,20 @@ export default function SoftwareCard() {
     <div className="container mx-auto px-4">
       <div className="overflow-x-auto flex space-x-4">
         {/* Repeat this card component as needed */}
-        <Card className="w-80 flex-shrink-0 shadow-md">
+        <Card className="custom-class w-80 flex-shrink-0 shadow-md">
           <CardHeader className="flex justify-between items-center">
             <div>
               <CardTitle>ZOHO CRM</CardTitle>
               <CardDescription>Zoho Corporation</CardDescription>
             </div>
-            {/* <img
-              src="/zoho-logo.png" // Replace with actual image path
+            <img
+              src="images/ZohoCRM/zoho.png" // Replace with actual image path
               alt="Zoho Logo"
               className="w-10 h-10"
-            /> */}
+            />
           </CardHeader>
-          <CardContent className="flex flex-col space-y-4">
-            <div className="flex space-x-2">
+          <CardContent className="flex flex-col space-y-4 justify-center">
+            <div className="flex space-x-2 justify-center">
               <Button
                 variant="outline"
                 className="text-gray-700 border-gray-300"
@@ -40,25 +40,13 @@ export default function SoftwareCard() {
               >
                 PLANS
               </Button>
-              <Button
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                FEATURES
-              </Button>
-              <Button
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                FEATURES
-              </Button>
             </div>
 
             <Button variant="default" className="w-full">
               GET FREE DEMO
             </Button>
           </CardContent>
-          <CardFooter className="text-center">
+          <CardFooter className="text-center justify-center">
             <div>
               <p className="text-sm text-gray-600">Starting at</p>
               <p className="text-xl font-semibold">$1350</p>
@@ -70,20 +58,20 @@ export default function SoftwareCard() {
         </Card>
         {/* Repeat above Card component for additional cards */}
         {/* Repeat this card component as needed */}
-        <Card className="w-80 flex-shrink-0 shadow-md">
+        <Card className="custom-class w-80 flex-shrink-0 shadow-md">
           <CardHeader className="flex justify-between items-center">
             <div>
               <CardTitle>ZOHO CRM</CardTitle>
               <CardDescription>Zoho Corporation</CardDescription>
             </div>
-            {/* <img
-              src="/zoho-logo.png" // Replace with actual image path
+            <img
+              src="images/ZohoCRM/zoho.png" // Replace with actual image path
               alt="Zoho Logo"
               className="w-10 h-10"
-            /> */}
+            />
           </CardHeader>
-          <CardContent className="flex flex-col space-y-4">
-            <div className="flex space-x-2">
+          <CardContent className="flex flex-col space-y-4 justify-center">
+            <div className="flex space-x-2 justify-center">
               <Button
                 variant="outline"
                 className="text-gray-700 border-gray-300"
@@ -96,25 +84,13 @@ export default function SoftwareCard() {
               >
                 PLANS
               </Button>
-              <Button
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                FEATURES
-              </Button>
-              <Button
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                FEATURES
-              </Button>
             </div>
 
             <Button variant="default" className="w-full">
               GET FREE DEMO
             </Button>
           </CardContent>
-          <CardFooter className="text-center">
+          <CardFooter className="text-center justify-center">
             <div>
               <p className="text-sm text-gray-600">Starting at</p>
               <p className="text-xl font-semibold">$1350</p>
@@ -126,20 +102,20 @@ export default function SoftwareCard() {
         </Card>
         {/* Repeat above Card component for additional cards */}
         {/* Repeat this card component as needed */}
-        <Card className="w-80 flex-shrink-0 shadow-md">
+        <Card className="custom-class w-80 flex-shrink-0 shadow-md">
           <CardHeader className="flex justify-between items-center">
             <div>
               <CardTitle>ZOHO CRM</CardTitle>
               <CardDescription>Zoho Corporation</CardDescription>
             </div>
-            {/* <img
-              src="/zoho-logo.png" // Replace with actual image path
+            <img
+              src="images/ZohoCRM/zoho.png" // Replace with actual image path
               alt="Zoho Logo"
               className="w-10 h-10"
-            /> */}
+            />
           </CardHeader>
-          <CardContent className="flex flex-col space-y-4">
-            <div className="flex space-x-2">
+          <CardContent className="flex flex-col space-y-4 justify-center">
+            <div className="flex space-x-2 justify-center">
               <Button
                 variant="outline"
                 className="text-gray-700 border-gray-300"
@@ -152,25 +128,13 @@ export default function SoftwareCard() {
               >
                 PLANS
               </Button>
-              <Button
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                FEATURES
-              </Button>
-              <Button
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                FEATURES
-              </Button>
             </div>
 
             <Button variant="default" className="w-full">
               GET FREE DEMO
             </Button>
           </CardContent>
-          <CardFooter className="text-center">
+          <CardFooter className="text-center justify-center">
             <div>
               <p className="text-sm text-gray-600">Starting at</p>
               <p className="text-xl font-semibold">$1350</p>

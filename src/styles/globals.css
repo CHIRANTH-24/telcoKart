@@ -67,3 +67,7 @@
     @apply bg-background text-foreground;
   }
 }
+.custom-class {
+  background-color: rgb(65, 65, 254);
+  color: white;
+}

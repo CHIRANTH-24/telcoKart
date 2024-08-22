@@ -5,12 +5,12 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 
 const images = [
-  { id: 1, src: "/images/", title: "Card 1" },
-  { id: 2, src: "/images/Prime Brands/visitor.jpeg", title: "Card 2" },
-  { id: 3, src: "/images/Prime Brands/visitor.jpeg", title: "Card 3" },
-  { id: 4, src: "/images/Prime Brands/visitor.jpeg", title: "Card 4" },
-  { id: 5, src: "/images/Prime Brands/visitor.jpeg", title: "Card 5" },
-  { id: 6, src: "/images/Prime Brands/visitor.jpeg", title: "Card 6" },
+  { id: 1, src: "/images/airpod.png", title: "Card 1" },
+  { id: 2, src: "/images/camera.png", title: "Card 2" },
+  { id: 3, src: "/images/sony.png", title: "Card 3" },
+  { id: 4, src: "/images/Trending/dol.jpg", title: "Card 4" },
+  { id: 5, src: "/images/Trending/pens.jpg", title: "Card 5" },
+  { id: 6, src: "/images/Trending/peanut.jpg", title: "Card 6" },
   // Add more images as needed
 ];
 
@@ -33,7 +33,7 @@ export default function PrimeBrand() {
     <div className="container mx-auto flex flex-col items-center justify-center px-4 py-8">
       <div className="relative w-full flex items-center justify-between">
         {/* Previous Button */}
-        <Button onClick={handlePrev} className="absolute left-0 z-10 p-3">
+        <Button onClick={handlePrev} className="custom-class absolute left-0 z-10 p-3">
           &#8592;
         </Button>
 
@@ -58,7 +58,7 @@ export default function PrimeBrand() {
         </div>
 
         {/* Next Button */}
-        <Button onClick={handleNext} className="absolute right-0 z-10 p-3">
+        <Button onClick={handleNext} className="custom-class absolute right-0 z-10 p-3">
           &#8594;
         </Button>
       </div>

@@ -8,12 +8,12 @@ const Subscribe = () => {
   return (
     <div className="container mx-auto flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 px-4 py-8">
       {/* Image Section */}
-      <div className="w-full md:w-1/2">
+      <div className="justify-center">
         <Image
           src="/images/Footer/sub.png" // Replace with your actual image path
           alt="Subscribe"
-          width={200}
-          height={310}
+          width={120}
+          height={100}
           className="w-full h-auto rounded-lg"
         />
       </div>
@@ -36,7 +36,7 @@ const Subscribe = () => {
               placeholder="Enter your email"
               className="flex-grow mb-4 sm:mb-0 sm:mr-2 p-3 rounded-md border border-gray-300"
             />
-            <Button variant="default" className="w-full sm:w-auto">
+            <Button variant="default" className="custom-class w-full sm:w-auto">
               Subscribe
             </Button>
           </form>

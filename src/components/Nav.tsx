@@ -8,15 +8,10 @@ const Nav = () => {
     <>
       <nav className="flex items-center justify-between p-4 bg-white shadow-md">
         <div className="flex items-center space-x-2">
-          <img
-            src="/images/logo.png"
-            alt="Telcokart Logo"
-            className="h-8"
-          />
+          <img src="/images/logo.png" alt="Telcokart Logo" className="h-8" />
           <span className="text-xl font-bold">Telcokart</span>
         </div>
-        <div className="flex items-center w-1/2 mx-4">
-          
+        <div className="flex items-center w-1/2 h-1/2 mx-3">
           <Input
             type="text"
             placeholder="Search the product"
@@ -24,18 +19,9 @@ const Nav = () => {
           />
         </div>
         <div className="flex space-x-4">
-          <Button color="blue">
-            Advertise
-          </Button>
-          <Button color="blue">
-            List Business
-          </Button>
-          <Button color="blue">
-            Get Advice
-          </Button>
-          <Button color="blue">
-            Login
-          </Button>
+          <a>Advertise</a>
+          <a>List Business</a>
+          <a>Get Advice</a>
         </div>
       </nav>
     </>

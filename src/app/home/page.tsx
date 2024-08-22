@@ -11,20 +11,21 @@ import React from 'react'
 
 function page() {
   const images = [
-    "/images/hotel.jpg",
-    "/images/gig-economy.png",
+    "/images/slider.png",
+    "/images/cctv.jpg",
   ];
   return (
     <>
       <Nav />
       <MainCategory />
       <Show images={images} />
+      <PrimeBrand />
       <Softwarecard />
       <Show images={images} />
       <PrimeBrand />
       <Subscribe />
       <Footer />
-      </>
+    </>
   );
 }
 

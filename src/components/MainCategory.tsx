@@ -21,7 +21,8 @@ import {
 import Image from "next/image";
 const fixedPath = "/form";
 const handleNavigation = () => {
-  window.location.href = "/form"; // Replace with your desired path
+  window.location.href =
+    "https://forms.zohopublic.in/Connectivities/form/PrePaid/formperma/IIKOLB5-hSUMY8DOdzltvDmb174CIKw3F6SrT6QkJ8k"; // Replace with your desired path
 };
 const cardItems = [
   { id: 1, name: "Mobility", logo: "/images/mobility27.png" },
@@ -170,7 +171,7 @@ export default function Component() {
           {subItem}
         </DropdownMenuSubTrigger>
         <DropdownMenuPortal>
-          <Link href="/form" passHref>
+          <Link href="https://forms.zohopublic.in/Connectivities/form/PrePaid/formperma/IIKOLB5-hSUMY8DOdzltvDmb174CIKw3F6SrT6QkJ8k" target="_blank" aria-label="Pre-Paid Form" passHref>
             <DropdownMenuSubContent>
               <DropdownMenuItem onClick={handleNavigation}>
                 <FileQuestion className="mr-2 h-4 w-4" />
