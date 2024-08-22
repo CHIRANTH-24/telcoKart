@@ -11,8 +11,8 @@ import React from 'react'
 
 function page() {
   const images = [
-    "/public/images/hotel.jpg",
-    "/public/images/gig-economy.png",
+    "/images/hotel.jpg",
+    "/images/gig-economy.png",
   ];
   return (
     <>

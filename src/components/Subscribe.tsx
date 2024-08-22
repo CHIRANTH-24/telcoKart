@@ -1,4 +1,4 @@
-// components/Subscribe.tsx
+
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -10,10 +10,10 @@ const Subscribe = () => {
       {/* Image Section */}
       <div className="w-full md:w-1/2">
         <Image
-          src="/public/images/Footer/sub.png" // Replace with your actual image path
+          src="/images/Footer/sub.png" // Replace with your actual image path
           alt="Subscribe"
-          width={0}
-          height={0}
+          width={200}
+          height={310}
           className="w-full h-auto rounded-lg"
         />
       </div>

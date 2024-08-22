@@ -1,5 +1,5 @@
-import { Link } from 'lucide-react';
-import React from 'react';// or any routing library you're using
+import  Link  from 'next/link';
+import React from 'react';
 const Footer = () => {
   return (
     <div>
@@ -7,31 +7,31 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between gap-8">
             <div className="flex-1 max-w-[200px]">
-              <h6 className="text-lg font-semibold mb-4">Know Us</h6>
+              <h6 className="text-lg font-semibold mb-4 text-white">Know Us</h6>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/about">
-                    <a className="hover:underline">About Us</a>
+                  <Link className="hover:underline text-white" href="/about">
+                    About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/team">
-                    <p className="hover:underline">Our Team</p>
+                  <Link className="hover:underline" href="/team">
+                    Our Team
                   </Link>
                 </li>
                 <li>
-                  <Link href="/careers">
-                    <a className="hover:underline">Careers</a>
+                  <Link className="hover:underline" href="/careers">
+                   Careers
                   </Link>
                 </li>
                 <li>
-                  <Link href="/press">
-                    <a className="hover:underline">Press</a>
+                  <Link className="hover:underline" href="/press">
+                   Press
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact">
-                    <a className="hover:underline">Contact Us</a>
+                  <Link className="hover:underline" href="/contact">
+                   Contact Us
                   </Link>
                 </li>
               </ul>
@@ -40,28 +40,28 @@ const Footer = () => {
               <h6 className="text-lg font-semibold mb-4">Quick Links</h6>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/home">
-                    <a className="hover:underline">Home</a>
+                  <Link className="hover:underline" href="/home">
+                   Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services">
-                    <a className="hover:underline">Services</a>
+                  <Link className="hover:underline" href="/services">
+                   Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing">
-                    <a className="hover:underline">Pricing</a>
+                  <Link className="hover:underline" href="/pricing">
+                   Pricing
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog">
-                    <a className="hover:underline">Blog</a>
+                  <Link className="hover:underline" href="/blog">
+                   Blog
                   </Link>
                 </li>
                 <li>
-                  <Link href="/faq">
-                    <a className="hover:underline">FAQ</a>
+                  <Link className="hover:underline" href="/faq">
+                   FAQ
                   </Link>
                 </li>
               </ul>
@@ -70,28 +70,28 @@ const Footer = () => {
               <h6 className="text-lg font-semibold mb-4">For Business</h6>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/solutions">
-                    <a className="hover:underline">Solutions</a>
+                  <Link className="hover:underline" href="/solutions">
+                   Solutions
                   </Link>
                 </li>
                 <li>
-                  <Link href="/case-studies">
-                    <a className="hover:underline">Case Studies</a>
+                  <Link className="hover:underline" href="/case-studies">
+                   Case Studies
                   </Link>
                 </li>
                 <li>
-                  <Link href="/enterprise">
-                    <a className="hover:underline">Enterprise</a>
+                  <Link className="hover:underline" href="/enterprise">
+                   Enterprise
                   </Link>
                 </li>
                 <li>
-                  <Link href="/partners">
-                    <a className="hover:underline">Partners</a>
+                  <Link className="hover:underline" href="/partners">
+                   Partners
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact-sales">
-                    <a className="hover:underline">Contact Sales</a>
+                  <Link className="hover:underline" href="/contact-sales">
+                   Contact Sales
                   </Link>
                 </li>
               </ul>
@@ -101,27 +101,27 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <Link href="/startup-resources">
-                    <a className="hover:underline">Resources</a>
+                   Resources
                   </Link>
                 </li>
                 <li>
                   <Link href="/mentorship">
-                    <a className="hover:underline">Mentorship</a>
+                   Mentorship
                   </Link>
                 </li>
                 <li>
                   <Link href="/incubators">
-                    <a className="hover:underline">Incubators</a>
+                   Incubators
                   </Link>
                 </li>
                 <li>
                   <Link href="/grants">
-                    <a className="hover:underline">Grants</a>
+                   Grants
                   </Link>
                 </li>
                 <li>
                   <Link href="/startup-events">
-                    <a className="hover:underline">Events</a>
+                   Events
                   </Link>
                 </li>
               </ul>
@@ -131,28 +131,26 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <Link href="/social-media">
-                    <a className="hover:underline">Social Media</a>
+                   Social Media
                   </Link>
                 </li>
                 <li>
                   <Link href="/newsletter">
-                    <a className="hover:underline">Newsletter</a>
+                   Newsletter
                   </Link>
                 </li>
                 <li>
                   <Link href="/feedback">
-                    <a className="hover:underline">Feedback</a>
+                   Feedback
                   </Link>
                 </li>
                 <li>
                   <Link href="/support">
-                    <a className="hover:underline">Support</a>
+                   Support
                   </Link>
                 </li>
                 <li>
-                  <Link href="/community">
-                    <a className="hover:underline">Community</a>
-                  </Link>
+                  <Link href="/community">Community</Link>
                 </li>
               </ul>
             </div>

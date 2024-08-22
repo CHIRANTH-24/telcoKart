@@ -5,12 +5,12 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 
 const images = [
-  { id: 1, src: "/images/card1.jpg", title: "Card 1" },
-  { id: 2, src: "/images/card2.jpg", title: "Card 2" },
-  { id: 3, src: "/images/card3.jpg", title: "Card 3" },
-  { id: 4, src: "/images/card4.jpg", title: "Card 4" },
-  { id: 5, src: "/images/card5.jpg", title: "Card 5" },
-  { id: 6, src: "/images/card6.jpg", title: "Card 6" },
+  { id: 1, src: "/images/", title: "Card 1" },
+  { id: 2, src: "/images/Prime Brands/visitor.jpeg", title: "Card 2" },
+  { id: 3, src: "/images/Prime Brands/visitor.jpeg", title: "Card 3" },
+  { id: 4, src: "/images/Prime Brands/visitor.jpeg", title: "Card 4" },
+  { id: 5, src: "/images/Prime Brands/visitor.jpeg", title: "Card 5" },
+  { id: 6, src: "/images/Prime Brands/visitor.jpeg", title: "Card 6" },
   // Add more images as needed
 ];
 
