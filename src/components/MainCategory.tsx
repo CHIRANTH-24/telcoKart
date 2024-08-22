@@ -215,7 +215,7 @@ export default function Component() {
                 className="mb-1"
               />
               <div className="flex flex-col items-center justify-between w-full">
-                <p className="text-center text-[0.6rem] leading-tight">
+                <p className="text-center text-[0.6rem] leading-tight font-bold">
                   {item.name}
                 </p>
                 <DropdownMenu>

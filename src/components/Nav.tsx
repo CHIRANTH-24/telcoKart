@@ -8,11 +8,11 @@ const Nav = () => {
     <>
       <nav className="flex items-center justify-between p-4 bg-white shadow-md">
         <div className="flex items-center space-x-2">
-          {/* <img
-            src="/public/images/logo.png"
+          <img
+            src="/images/logo.png"
             alt="Telcokart Logo"
             className="h-8"
-          /> */}
+          />
           <span className="text-xl font-bold">Telcokart</span>
         </div>
         <div className="flex items-center w-1/2 mx-4">

@@ -24,7 +24,7 @@ function page() {
       <PrimeBrand />
       <Subscribe />
       <Footer />
-    </>
+      </>
   );
 }
 
