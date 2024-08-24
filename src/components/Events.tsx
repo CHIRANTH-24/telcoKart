@@ -49,12 +49,12 @@ const events = [
 
 export default function Events() {
   return (
-    <div className="w-full max-w-6xl p-4 pt-8">
+    <div className="w-full p-4 pt-8">
       <div className="flex items-center space-x-2 mb-4 justify-center">
         <Badge className="bg-yellow-400 text-black">EVENT</Badge>
         <Badge className="bg-yellow-400 text-black">WEBINAR</Badge>
       </div>
-      <div className="flex overflow-x-auto space-x-4 pb-4">
+      <div className="flex justify-center overflow-x-auto space-x-4 pb-4">
         {events.map((event, index) => (
           <Card key={index} className="flex-shrink-0 w-64">
             <CardHeader className="p-0">

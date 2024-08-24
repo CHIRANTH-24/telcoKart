@@ -16,7 +16,7 @@ const products = [
 
 export default function PopularSat() {
   return (
-    <div className="w-full max-w-6xl p-4 space-y-4 ">
+    <div className="w-full p-4 space-y-4 justify-center ">
       <h2 className="text-2xl font-bold mb-4">Popular Satellite Services</h2>
       <div className="flex flex-col md:flex-row gap-4">
         <div className="w-full md:w-2/5 grid grid-cols-2 gap-4">

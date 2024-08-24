@@ -28,7 +28,7 @@ const Show: React.FC<ShowProps> = ({ images }) => {
   }, [images.length]);
 
   return (
-    <div className="relative w-full max-w-[1454px]">
+    <div className="relative w-full justify-center">
       <div className="relative w-full h-0 pb-[18.46%]">
         {" "}
         {/* Aspect ratio 1454:269.81 */}

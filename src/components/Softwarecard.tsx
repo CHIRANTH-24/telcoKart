@@ -11,8 +11,8 @@ import { Button } from "./ui/button";
 
 export default function SoftwareCard() {
   return (
-    <div className="px-4">
-      <div className="overflow-x-auto flex space-x-4 ">
+    <div className="px-4 ">
+      <div className="overflow-x-auto flex space-x-4 justify-center">
         {/* Repeat this card component as needed */}
         <Card className=" w-80 flex-shrink-0 shadow-md">
           <CardHeader className="flex justify-between items-center">

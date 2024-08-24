@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Subscribe = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 px-4 py-8">
+    <div className="flex flex-col justify-center md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 px-4 py-8">
       {/* Image Section */}
       <div className="justify-center">
         <Image
