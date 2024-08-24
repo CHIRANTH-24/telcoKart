@@ -222,7 +222,7 @@ export default function Component() {
       <h2 className="text-2xl font-bold mb-4">
         Apple for Business
       </h2>
-      <div className="flex justify-between h-[300px]">
+      <div className="flex justify-center h-[300px]">
         <div className="relative w-[1300px]">
           <Carousel ref={emblaRef} className="w-full">
             <CarouselContent>
@@ -264,7 +264,7 @@ export default function Component() {
           </Button>
         </div>
 
-        <div className="ml-4 w-[310px] h-[300px]">
+        <div className="flex align-left ml-1 w-[250px] h-[230px]">
           <div className="relative w-full h-full">
             <Image
               src="/images/airIndia.png"
