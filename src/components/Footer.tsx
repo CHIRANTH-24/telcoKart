@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="custom-class text-white py-8">
-        <div className="container mx-auto px-4 ">
+        <div className="px-4 ">
           <div className="flex flex-wrap justify-between gap-8">
             <div className="flex-1 max-w-[200px]">
               <h6 className="text-lg font-semibold mb-4 text-white">Know Us</h6>

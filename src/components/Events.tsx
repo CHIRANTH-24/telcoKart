@@ -49,7 +49,7 @@ const events = [
 
 export default function Events() {
   return (
-    <div className="w-full max-w-6xl mx-auto p-4 pt-8">
+    <div className="w-full max-w-6xl p-4 pt-8">
       <div className="flex items-center space-x-2 mb-4 justify-center">
         <Badge className="bg-yellow-400 text-black">EVENT</Badge>
         <Badge className="bg-yellow-400 text-black">WEBINAR</Badge>

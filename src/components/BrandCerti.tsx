@@ -23,7 +23,7 @@ export default function BrandCerti() {
   }, [scroll]);
 
   return (
-    <div className="w-full max-w-[1384px] h-[209px] mx-auto relative overflow-hidden">
+    <div className="w-full max-w-[1384px] h-[209px] relative overflow-hidden">
       <h2 className="text-2xl font-bold mb-4">Business Certifications</h2>
       <div
         className="flex transition-transform duration-300 ease-in-out"

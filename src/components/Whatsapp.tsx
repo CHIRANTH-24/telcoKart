@@ -40,7 +40,7 @@ const columns = [
 
 export default function Whatsapp() {
   return (
-    <Card className="w-full max-w-4xl mx-auto">
+    <Card className="w-full max-w-4xl">
       <CardHeader className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
         <div className="flex items-center space-x-2">
           <Phone className="h-8 w-8 text-green-500" />

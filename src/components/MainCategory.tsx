@@ -200,7 +200,7 @@ export default function Component() {
     ));
 
   return (
-    <div className="justify-center container mx-auto px-2 py-4">
+    <div className="justify-center px-2 py-4">
       <div className=" flex justify-center items-stretch overflow-x-auto space-x-2">
         {cardItems.map((item) => (
           <Card
