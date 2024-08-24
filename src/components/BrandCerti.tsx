@@ -23,38 +23,45 @@ export default function BrandCerti() {
   }, [scroll]);
 
   return (
-    <div className="w-full max-w-[1384px] h-[209px] relative overflow-hidden">
-      <h2 className="text-2xl font-bold mb-4">Business Certifications</h2>
-      <div
-        className="flex transition-transform duration-300 ease-in-out"
-        style={{ transform: `translateX(-${scrollPosition}px)` }}
+    <>
+      <h2
+        className="text-2xl font-bold mb-4
+      px-2 py-4"
       >
-        {certifications.map((src, index) => (
-          <div key={index} className="flex-shrink-0 w-[120px] h-[120px] mx-4">
-            <Image
-              src={src}
-              alt={`ISO 9001:2015 Certification ${index + 1}`}
-              width={120}
-              height={120}
-              className="object-contain"
-            />
-          </div>
-        ))}
+        Business Certifications
+      </h2>
+      <div className="flex justify-center w-full relative overflow-hidden px-2 py-4">
+        <div
+          className="flex transition-transform duration-300 ease-in-out"
+          style={{ transform: `translateX(-${scrollPosition}px)` }}
+        >
+          {certifications.map((src, index) => (
+            <div key={index} className="flex-shrink-0 w-[120px] h-[120px] mx-4">
+              <Image
+                src={src}
+                alt={`ISO 9001:2015 Certification ${index + 1}`}
+                width={120}
+                height={120}
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </div>
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full"
+          aria-label="Scroll left"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full"
+          aria-label="Scroll right"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
       </div>
-      <button
-        onClick={() => scroll("left")}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full"
-        aria-label="Scroll left"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-      <button
-        onClick={() => scroll("right")}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full"
-        aria-label="Scroll right"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
-    </div>
+    </>
   );
 }
