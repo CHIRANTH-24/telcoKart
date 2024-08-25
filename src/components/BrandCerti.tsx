@@ -2,13 +2,13 @@ import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-const certifications = Array(12).fill("/images/Business/iso.jpg"); // 12 certifications for smooth infinite scroll
+const certifications = Array(6).fill("/images/Business/iso.jpg"); // 12 certifications for smooth infinite scroll
 
 export default function BrandCerti() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const scroll = useCallback((direction: "left" | "right") => {
-    const scrollAmount = direction === "left" ? -120 : 120;
+    const scrollAmount = direction === "left" ? 0 : 120;
     setScrollPosition((prevPosition) => {
       const newPosition = prevPosition + scrollAmount;
       if (newPosition < 0) return 720 + newPosition; // Wrap around to the end
@@ -18,7 +18,7 @@ export default function BrandCerti() {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => scroll("right"), 3000); // Auto-scroll every 3 seconds
+    const interval = setInterval(() => scroll("left"), 3000); // Auto-scroll every 3 seconds
     return () => clearInterval(interval);
   }, [scroll]);
 
@@ -30,7 +30,7 @@ export default function BrandCerti() {
       >
         Business Certifications
       </h2>
-      <div className="flex justify-center w-full relative overflow-hidden px-2 py-4">
+      <div className="flex justify-center relative  px-2 py-4">
         <div
           className="flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${scrollPosition}px)` }}
@@ -49,7 +49,7 @@ export default function BrandCerti() {
         </div>
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full"
+          className="absolute left-10 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full"
           aria-label="Scroll left"
         >
           <ChevronLeft className="w-6 h-6" />

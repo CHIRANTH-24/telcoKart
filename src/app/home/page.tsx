@@ -33,7 +33,7 @@ function page() {
       <Show images={images} />
       <Whatsapp />
       <Events />
-      <PrimeBrand />
+      {/* <PrimeBrand /> */}
       <Subscribe />
       <Footer />
     </>

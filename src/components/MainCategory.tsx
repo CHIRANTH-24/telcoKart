@@ -201,7 +201,7 @@ export default function Component() {
 
   return (
     <div className="px-2 py-4">
-      <div className=" flex justify-center items-stretch overflow-x-auto space-x-2 ">
+      <div className=" flex    justify-between items-stretch  space-x-2 ">
         {cardItems.map((item) => (
           <Card
             key={item.id}
