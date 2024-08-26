@@ -28,8 +28,7 @@ function page() {
       <PopularSat />
       <PrimeBrand />
       <BrandCerti />
-      {/* <Softwarecard /> */}
-
+      <Softwarecard />
       <Show images={images} />
       <Whatsapp />
       <Events />

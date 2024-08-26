@@ -5,6 +5,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { Button } from "@/components/ui/button";
@@ -26,31 +28,13 @@ const images = [
 const extendedImages = [...images, ...images].slice(0, 8);
 
 export default function Component() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    slidesToScroll: 1,
-  });
-
-  useEffect(() => {
-    if (emblaApi) {
-      const interval = setInterval(() => {
-        emblaApi.scrollNext();
-      }, 3000);
-
-      return () => clearInterval(interval);
-    }
-  }, [emblaApi]);
-
-  const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
-  const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
   return (
     <div className="w-full p-4 space-y-4">
       <h2 className="text-2xl font-bold mb-4">Apple for Business</h2>
       <div className="flex justify-between h-[300px]">
         <div className="relative w-[1300px]">
-          <Carousel ref={emblaRef} className="w-full">
+          <Carousel className="w-full">
             <CarouselContent>
               {extendedImages.map((image) => (
                 <CarouselItem key={image.id} className="basis-1/8 pl-4">
@@ -62,8 +46,8 @@ export default function Component() {
                       <Image
                         src={image.src}
                         alt={image.title}
-                        width={120}
-                        height={90}
+                        width={200}
+                        height={200}
                         className="rounded-md object-cover"
                       />
                     </CardContent>
@@ -71,23 +55,9 @@ export default function Component() {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious variant={"secondary"} />
+            <CarouselNext variant={"secondary"} />
           </Carousel>
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20"
-            onClick={scrollPrev}
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20"
-            onClick={scrollNext}
-          >
-            <ChevronRight className="h-4 w-4" />
-          </Button>
         </div>
 
         <div className="ml-4 w-[250px] h-[230px]">
@@ -95,7 +65,8 @@ export default function Component() {
             <Image
               src="/images/airIndia.png"
               alt="Advertisement"
-              fill
+              height={250}
+              width={200}
               className="rounded-md object-cover"
             />
           </div>

@@ -6,6 +6,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
+import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay";
 
 const products = [
   { name: "M19 Earbuds", image: "/images/earpode.jpg" },
@@ -19,36 +28,69 @@ export default function PopularSat() {
     <div className="w-full p-4 space-y-4 justify-center ">
       <h2 className="text-2xl font-bold mb-4">Popular Satellite Services</h2>
       <div className="flex flex-col md:flex-row gap-4">
-        <div className="w-full md:w-2/5 grid grid-cols-2 gap-4">
-          {products.map((product, index) => (
-            <Card key={index} className="flex flex-col justify-between">
-              <CardHeader className="p-4">
-                {/* <Image
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-20 object-contain"
-                /> */}
-              </CardHeader>
-              <CardContent className="p-4 pt-0">
-                <CardTitle className="text-center text-sm">
-                  {product.name}
-                </CardTitle>
-              </CardContent>
-              <CardFooter className="p-4 pt-0">
-                <Button variant="outline" size="sm" className="w-full text-xs">
-                  LOGIN / SIGN UP
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
+        <div className="mr-10 ">
+          <Carousel
+            // opts={{
+            //   align: "start",
+            //   loop: true,
+            // }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+              }),
+            ]}
+            className="max-w-sm w-full"
+          >
+            <CarouselContent className="w-fit mx-auto">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1 flex items-center gap-2">
+                    {products.slice(0, 2).map((product, index) => (
+                      <Card key={index} className=" h-full ">
+                        <CardContent>
+                          <Image
+                            src={product.image}
+                            height={150}
+                            width={150}
+                            alt="Image"
+                            className="object-cover"
+                          />
+                          <Button className="w-full mt-2 ">Login</Button>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                  <div className="p-1 flex items-center gap-2">
+                    {products.slice(2, 4).map((product, index) => (
+                      <Card key={index} className="">
+                        <CardContent>
+                          <Image
+                            src={product.image}
+                            height={150}
+                            width={150}
+                            alt="Image"
+                          />
+                          <Button className="w-full mt-2 ">Login</Button>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious variant={"secondary"} />
+            <CarouselNext />
+          </Carousel>
         </div>
-        <div className="w-full md:w-3/5 space-y-4">
-          <div className="relative h-48 bg-orange-100 rounded-lg overflow-hidden">
-            {/* <Image
-              src="/placeholder.svg?height=192&width=640"
+        <div className="w-full space-y-4">
+          <div className="relative h-48  rounded-lg overflow-hidden">
+            <Image
+              src="/images/slider.png"
               alt="Book Hotels"
-              className="w-full h-full object-cover"
-            /> */}
+              className="w-full object-cover"
+              width={120}
+              height={400}
+            />
             <div className="absolute inset-0 flex items-center justify-center">
               <h3 className="text-2xl font-bold text-white text-center">
                 Compare prices &<br />
@@ -57,11 +99,13 @@ export default function PopularSat() {
             </div>
           </div>
           <div className="relative h-48 bg-blue-100 rounded-lg overflow-hidden">
-            {/* <Image
-              src="/placeholder.svg?height=192&width=640"
+            <Image
+              src="/images/cctv.jpg"
               alt="CCTV Cameras"
               className="w-full h-full object-cover"
-            /> */}
+              width={120}
+              height={400}
+            />
             <div className="absolute inset-0 flex items-center justify-center">
               <h3 className="text-2xl font-bold text-white text-center">
                 CCTV CAMERAS AND

@@ -2,6 +2,16 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Button } from "./ui/button"; // Adjust import based on your UI library
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
 
 interface ShowProps {
   images: string[]; // Array of image URLs
@@ -28,32 +38,39 @@ const Show: React.FC<ShowProps> = ({ images }) => {
   }, [images.length]);
 
   return (
-    <div className="relative w-full justify-center">
-      <div className="relative w-full h-0 pb-[18.46%]">
-        {" "}
-        {/* Aspect ratio 1454:269.81 */}
-        <Image
-          src={visibleImages[currentIndex]}
-          alt={`Product Image ${currentIndex + 1}`}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
-        />
-      </div>
-      <button
-        onClick={handlePrev}
-        className="custom-class absolute top-1/2 left-4 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700"
-      >
-        &lt;
-      </button>
-      <button
-        onClick={handleNext}
-        className="custom-class absolute top-1/2 right-4 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700"
-      >
-        &gt;
-      </button>
-    </div>
+    <Carousel
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
+    >
+      <CarouselContent>
+        {visibleImages.map((img, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex items-center justify-center p-6">
+                  <Image
+                    src={img}
+                    alt={`Product Image ${currentIndex + 1}`}
+                    objectFit="cover"
+                    className="rounded-lg w-full h-72"
+                    width={1000}
+                    height={1000}
+                  />
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   );
 };
 
 export default Show;
+
+
