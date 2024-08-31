@@ -171,24 +171,313 @@ export default function Component() {
           {subItem}
         </DropdownMenuSubTrigger>
         <DropdownMenuPortal>
-          <Link href="https://forms.zohopublic.in/Connectivities/form/PrePaid/formperma/IIKOLB5-hSUMY8DOdzltvDmb174CIKw3F6SrT6QkJ8k" target="_blank" aria-label="Pre-Paid Form" passHref>
+          <Link
+            href="https://forms.zohopublic.in/Connectivities/form/PrePaid/formperma/IIKOLB5-hSUMY8DOdzltvDmb174CIKw3F6SrT6QkJ8k"
+            target="_blank"
+            aria-label="Pre-Paid Form"
+            passHref
+          >
             <DropdownMenuSubContent>
-              <DropdownMenuItem onClick={handleNavigation}>
-                <FileQuestion className="mr-2 h-4 w-4" />
-                <span className="text-xs">Enquiry</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={handleNavigation}>
-                <Users className="mr-2 h-4 w-4" />
-                <span className="text-xs">Enquiry Discussion Meeting</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={handleNavigation}>
-                <Download className="mr-2 h-4 w-4" />
-                <span className="text-xs">Download</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={handleNavigation}>
-                <FileText className="mr-2 h-4 w-4" />
-                <span className="text-xs">Use Case</span>
-              </DropdownMenuItem>
+              {
+                <DropdownMenuItem onClick={handleNavigation}>
+                  <FileQuestion className="mr-2 h-4 w-4" />
+                  <span className="text-xs">Submit Enquiry</span>
+                </DropdownMenuItem>
+              }
+              {subItem !== "Pre-Paid" &&
+                subItem !== "Post paid" &&
+                subItem !== "MNP" &&
+                subItem !== "Prepaid to Postpaid" &&
+                subItem !== "Data SIMs ( No Voice)" &&
+                subItem !== "Broadband" &&
+                subItem !== "Internet Leased Line" &&
+                subItem !== "IPLC" &&
+                subItem !== "NLD" &&
+                subItem !== "Managed WiFi" &&
+                subItem !== "Google Connect" &&
+                subItem !== "Amazon Connect" &&
+                subItem !== "Azure Connect" &&
+                subItem !== "OPGW Fiber" &&
+                subItem !== "PRI - SIP" &&
+                subItem !== "Toll Free" &&
+                subItem !== "Conferencing Solution" &&
+                subItem !== "Mobile Number CLI" &&
+                subItem !== "Landline CLI" &&
+                subItem !== "Number Masking" &&
+                subItem !== "Click To Call" &&
+                subItem !== "Missed Call Solution" &&
+                subItem !== "Sim Based Recording" &&
+                subItem !== "Apis" && (
+                  <DropdownMenuItem onClick={handleNavigation}>
+                    <Users className="mr-2 h-4 w-4" />
+                    <span className="text-xs">Schedule Meeting</span>
+                  </DropdownMenuItem>
+                )}
+              {subItem !== "Pre-Paid" &&
+                subItem !== "Post paid" &&
+                subItem !== "MNP" &&
+                subItem !== "Prepaid to Postpaid" &&
+                subItem !== "Data SIMs ( No Voice)" &&
+                subItem !== "Vehicle Telematics SIMs" &&
+                subItem !== "Pre-Paid" &&
+                subItem !== "Post paid" &&
+                subItem !== "MNP" &&
+                subItem !== "Prepaid to Postpaid" &&
+                subItem !== "Data SIMs ( No Voice)" &&
+                subItem !== "Vehicle Telematics SIMs" &&
+                subItem !== "Data Connectivity" &&
+                subItem !== "Broadband" &&
+                subItem !== "Internet Leased Line" &&
+                subItem !== "MPLS" &&
+                subItem !== "Global MPLS" &&
+                subItem !== "IPLC" &&
+                subItem !== "NLD" &&
+                subItem !== "Managed WiFi" &&
+                subItem !== "Google Connect" &&
+                subItem !== "Amazon Connect" &&
+                subItem !== "Azure Connect" &&
+                subItem !== "OPGW Fiber" &&
+                subItem !== "Digital Voice Solutions" &&
+                subItem !== "Conferencing Solution" &&
+                subItem !== "Mobile Number CLI" &&
+                subItem !== "Landline CLI" &&
+                subItem !== "Number Masking" &&
+                subItem !== "Sim Based Recording" &&
+                subItem !== "SMS & Bots" &&
+                subItem !== "SMS Reminders" &&
+                subItem !== "SMS Notifications" &&
+                subItem !== "RCS" &&
+                subItem !== "In-App-Massaging" &&
+                subItem !== "Mobile Push Notification" &&
+                subItem !== "Cloud & Data Centre" &&
+                subItem !== "Data Centre Built" &&
+                subItem !== "Cyber Security" &&
+                subItem !== "Network Security" &&
+                subItem !== "Network Segmentation" &&
+                subItem !== "Endpoint Security" &&
+                subItem !== "Data Security" &&
+                subItem !== "Identity and Access Management (IAM)" &&
+                subItem !== "Privileged Access Management (PAM)" &&
+                subItem !== "Cloud Security" &&
+                subItem !== "Application Security" &&
+                subItem !== "Incident Response" &&
+                subItem !== "Threat Intelligence" &&
+                subItem !== "Governance, Risk, and Compliance (GRC)" &&
+                subItem !==
+                  "Security Orchestration Automation and Response (SOAR)" &&
+                subItem !==
+                  "Security Information and Event Management (SIEM)" &&
+                subItem !== "SIEM Solution" &&
+                subItem !== "Physical Security" &&
+                subItem !== "DDI Solutions" &&
+                subItem !== "Distributed Denial of Service (DDoS)" &&
+                subItem !== "Security Operations Center (SOC)" &&
+                subItem !== "Gig Economy" &&
+                subItem !== "For Business" &&
+                subItem !== "Promotion" &&
+                subItem !== "Social Media Post Engagement" &&
+                subItem !== "Telegram Channel Promotion" &&
+                subItem !== "Mobile App Promotion" &&
+                subItem !== "WhatsApp Group Promotion" &&
+                subItem !== "Content Writing" &&
+                subItem !== "Translation and Transcription" &&
+                subItem !== "LinkedIn Page Management" &&
+                subItem !== "Online Reputation Management" &&
+                subItem !== "Fintech Acquisition" &&
+                subItem !== "Credit Card Acquisition" &&
+                subItem !== "Demat Account Opening" &&
+                subItem !== "Debit Card Acquisition" &&
+                subItem !== "Savings Account Opening" &&
+                subItem !== "User Acquisition" &&
+                subItem !== "Google and Facebook Ads" &&
+                subItem !== "Search Engine Optimization" &&
+                subItem !== "Public Relations" &&
+                subItem !== "Social Media Management" &&
+                subItem !== "Designing" &&
+                subItem !== "UI/UX Designing" &&
+                subItem !== "Graphic Designing" &&
+                subItem !== "Development" &&
+                subItem !== "Mobile App Development" &&
+                subItem !== "Website Development" &&
+                subItem !== "Data" &&
+                subItem !== "Data Entry" &&
+                subItem !== "Data Analytics" &&
+                subItem !== "Data Mining" &&
+                subItem !== "Catalog Management" &&
+                subItem !== "Research" &&
+                subItem !== "Market Research" &&
+                subItem !== "Online Survey" &&
+                subItem !== "Mystery Auditing" &&
+                subItem !== "Product Sampling" &&
+                subItem !== "Branding" &&
+                subItem !== "Influencer Marketing" &&
+                subItem !== "LinkedIn Profile Management" &&
+                subItem !== "Lead Management" &&
+                subItem !== "Website Registrations" &&
+                subItem !== "Tele Calling" &&
+                subItem !== "For Gig" &&
+                subItem !== "Download App and Discover" &&
+                subItem !== "Perform Tasks or Projects" &&
+                subItem !== "Submit Proof of Work" &&
+                subItem !== "Get Paid" &&
+                subItem !== "Hardware" &&
+                subItem !== "Software" &&
+                subItem !== "Forms" &&
+                subItem !== "Forms-Automation-DMS" &&
+                subItem !== "CRM" &&
+                subItem !== "Asset Management" &&
+                subItem !== "Patch Management" &&
+                subItem !== "Productivity Management" &&
+                subItem !== "Data Center Management" &&
+                subItem !== "Payroll Management" &&
+                subItem !== "Startups" &&
+                subItem !== "Virtual Office" &&
+                subItem !== "Co-working Space" &&
+                subItem !== "Pitch Deck Review*Free" &&
+                subItem !== "Teaser Pitch" &&
+                subItem !== "Investor Proposal" &&
+                subItem !== "Financial Projections" &&
+                subItem !== "Fund Raising Consulting" &&
+                subItem !== "Investor Meet & Fund Raise" &&
+                subItem !== "Incorporation" &&
+                subItem !== "IPR" &&
+                subItem !== "Contracts & Agreements Management" &&
+                subItem !== "Legal Advisory" &&
+                subItem !== "Statutory Compliance" &&
+                subItem !== "Legal & Compliance Audit" &&
+                subItem !== "Policy & Procedures" &&
+                subItem !== "Licenses & Certifications" && (
+                  <DropdownMenuItem onClick={handleNavigation}>
+                    <Download className="mr-2 h-4 w-4" />
+                    <span className="text-xs">Download</span>
+                  </DropdownMenuItem>
+                )}
+              {subItem !== "Pre-Paid" &&
+                subItem !== "Post paid" &&
+                subItem !== "MNP" &&
+                subItem !== "Prepaid to Postpaid" &&
+                subItem !== "Data SIMs ( No Voice)" &&
+                subItem !== "Vehicle Telematics SIMs" &&
+                subItem !== "Pre-Paid" &&
+                subItem !== "Post paid" &&
+                subItem !== "MNP" &&
+                subItem !== "Prepaid to Postpaid" &&
+                subItem !== "Data SIMs ( No Voice)" &&
+                subItem !== "Vehicle Telematics SIMs" &&
+                subItem !== "Data Connectivity" &&
+                subItem !== "Broadband" &&
+                subItem !== "Internet Leased Line" &&
+                subItem !== "MPLS" &&
+                subItem !== "Global MPLS" &&
+                subItem !== "IPLC" &&
+                subItem !== "NLD" &&
+                subItem !== "Managed WiFi" &&
+                subItem !== "Google Connect" &&
+                subItem !== "Amazon Connect" &&
+                subItem !== "Azure Connect" &&
+                subItem !== "OPGW Fiber" &&
+                subItem !== "Digital Voice Solutions" &&
+                subItem !== "PRI - SIP" &&
+                subItem !== "Toll Free" &&
+                subItem !== "Contact Centre" &&
+                subItem !== "Conferencing Solution" &&
+                subItem !== "Sim Based Recording" &&
+                subItem !== "SMS & Bots" &&
+                subItem !== "Promotional" &&
+                subItem !== "Transactional" &&
+                subItem !== "SMS Reminders" &&
+                subItem !== "SMS Notifications" &&
+                subItem !== "RCS" &&
+                subItem !== "In-App-Massaging" &&
+                subItem !== "Mobile Push Notification" &&
+                subItem !== "Cloud & Data Centre" &&
+                subItem !== "Data Centre Built" &&
+                subItem !== "Cyber Security" &&
+                subItem !== "Network Security" &&
+                subItem !== "Network Segmentation" &&
+                subItem !== "Endpoint Security" &&
+                subItem !== "Data Security" &&
+                subItem !== "Identity and Access Management (IAM)" &&
+                subItem !== "Cloud Security" &&
+                subItem !== "Gig Economy" &&
+                subItem !== "For Business" &&
+                subItem !== "Promotion" &&
+                subItem !== "Social Media Post Engagement" &&
+                subItem !== "Telegram Channel Promotion" &&
+                subItem !== "Mobile App Promotion" &&
+                subItem !== "WhatsApp Group Promotion" &&
+                subItem !== "Content Writing" &&
+                subItem !== "Translation and Transcription" &&
+                subItem !== "LinkedIn Page Management" &&
+                subItem !== "Online Reputation Management" &&
+                subItem !== "Fintech Acquisition" &&
+                subItem !== "Credit Card Acquisition" &&
+                subItem !== "Demat Account Opening" &&
+                subItem !== "Debit Card Acquisition" &&
+                subItem !== "Savings Account Opening" &&
+                subItem !== "User Acquisition" &&
+                subItem !== "Google and Facebook Ads" &&
+                subItem !== "Search Engine Optimization" &&
+                subItem !== "Public Relations" &&
+                subItem !== "Social Media Management" &&
+                subItem !== "Designing" &&
+                subItem !== "UI/UX Designing" &&
+                subItem !== "Graphic Designing" &&
+                subItem !== "Development" &&
+                subItem !== "Mobile App Development" &&
+                subItem !== "Website Development" &&
+                subItem !== "Data" &&
+                subItem !== "Data Entry" &&
+                subItem !== "Data Analytics" &&
+                subItem !== "Data Mining" &&
+                subItem !== "Catalog Management" &&
+                subItem !== "Research" &&
+                subItem !== "Market Research" &&
+                subItem !== "Online Survey" &&
+                subItem !== "Mystery Auditing" &&
+                subItem !== "Product Sampling" &&
+                subItem !== "Branding" &&
+                subItem !== "Influencer Marketing" &&
+                subItem !== "LinkedIn Profile Management" &&
+                subItem !== "Lead Management" &&
+                subItem !== "Website Registrations" &&
+                subItem !== "Tele Calling" &&
+                subItem !== "For Gig" &&
+                subItem !== "Download App and Discover" &&
+                subItem !== "Perform Tasks or Projects" &&
+                subItem !== "Submit Proof of Work" &&
+                subItem !== "Get Paid" &&
+                subItem !== "Software" &&
+                subItem !== "Forms" &&
+                subItem !== "Forms-Automation-DMS" &&
+                subItem !== "CRM" &&
+                subItem !== "Asset Management" &&
+                subItem !== "Patch Management" &&
+                subItem !== "Productivity Management" &&
+                subItem !== "Data Center Management" &&
+                subItem !== "Payroll Management" &&
+                subItem !== "Startups" &&
+                subItem !== "Virtual Office" &&
+                subItem !== "Co-working Space" &&
+                subItem !== "Pitch Deck Review*Free" &&
+                subItem !== "Teaser Pitch" &&
+                subItem !== "Investor Proposal" &&
+                subItem !== "Financial Projections" &&
+                subItem !== "Fund Raising Consulting" &&
+                subItem !== "Investor Meet & Fund Raise" &&
+                subItem !== "Incorporation" &&
+                subItem !== "IPR" &&
+                subItem !== "Contracts & Agreements Management" &&
+                subItem !== "Legal Advisory" &&
+                subItem !== "Statutory Compliance" &&
+                subItem !== "Legal & Compliance Audit" &&
+                subItem !== "Policy & Procedures" &&
+                subItem !== "Licenses & Certifications" && (
+                  <DropdownMenuItem onClick={handleNavigation}>
+                    <FileText className="mr-2 h-4 w-4" />
+                    <span className="text-xs">Use Case</span>
+                  </DropdownMenuItem>
+                )}
               <DropdownMenuItem onClick={handleNavigation}>
                 <MessageCircle className="mr-2 h-4 w-4" />
                 <span className="text-xs">WhatsApp Chat</span>
