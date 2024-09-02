@@ -17,7 +17,7 @@ const images = [
   { id: 2, src: "/images/camera.png", title: "Card 2" },
   { id: 3, src: "/images/sony.png", title: "Card 3" },
   { id: 4, src: "/images/Trending/dol.jpg", title: "Card 4" },
-  // { id: 5, src: "/images/Trending/pens.jpg", title: "Card 5" },
+  { id: 5, src: "/images/Trending/pens.jpg", title: "Card 5" }
   // { id: 6, src: "/images/Trending/peanut.jpg", title: "Card 6" },
   // { id: 7, src: "/images/Trending/dol.jpg", title: "Card 7" },
   // { id: 8, src: "/images/Trending/pens.jpg", title: "Card 8" },

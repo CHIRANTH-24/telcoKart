@@ -12,219 +12,135 @@ import { Badge } from "./ui/badge";
 
 export default function SoftwareCard() {
   return (
-    <div className="px-4 ">
-      <div className="overflow-x-auto flex space-x-4 justify-center">
-        {/* Repeat this card component as needed */}
-        <Card className="w-[350px] flex-shrink-0 shadow-md">
+    <div className="px-4 py-8">
+      <div className="overflow-x-auto flex space-x-6 justify-center">
+        {/* First Card */}
+        <Card className="w-[320px] flex-shrink-0 shadow-lg rounded-lg">
           <CardHeader className="flex justify-between items-center">
             <div>
-              <CardTitle>ZOHO CRM</CardTitle>
-              <CardDescription>Zoho Corporation</CardDescription>
+              <CardTitle className="text-lg font-bold text-gray-900">ZOHO CRM</CardTitle>
+              <CardDescription className="text-gray-500">Zoho Corporation</CardDescription>
             </div>
             <img
               src="images/ZohoCRM/zoho.png" // Replace with actual image path
               alt="Zoho Logo"
-              className="w-10 h-10"
+              className="w-12 h-12"
             />
           </CardHeader>
-          <CardContent className="flex flex-col space-y-4 justify-center">
+          <CardContent className="flex flex-col space-y-4">
             <div className="flex space-x-2 justify-center">
               <Badge
                 variant="outline"
-                className="text-gray-700 border-gray-300"
+                className="text-gray-700 border-gray-300 px-4 py-2"
               >
                 FEATURES
               </Badge>
               <Badge
                 variant="outline"
-                className="text-gray-700 border-gray-300"
+                className="text-gray-700 border-gray-300 px-4 py-2"
               >
                 PLANS
               </Badge>
             </div>
 
-            <Button variant="outline" className="w-full border border-gray-700">
+            <Button variant="outline" className="w-full border border-gray-700 py-2">
               GET FREE DEMO
             </Button>
           </CardContent>
-          <CardFooter className="flex gap-6 text-center justify-center">
-            <div>
-              <p className=" text-gray-600">Starting at</p>
-              <p className=" font-semibold">$1350</p>
+          <CardFooter className="flex flex-col items-center space-y-2 text-center">
+            <div className="text-gray-600">
+              <p>Starting at</p>
+              <p className="text-lg font-semibold">$1350</p>
             </div>
-            <Button variant="secondary" className="mt-2">
+            <Button variant="secondary" className="py-2 px-4">
               Prize On Request
             </Button>
           </CardFooter>
         </Card>
 
-        <Card className="w-[350px] flex-shrink-0 shadow-md">
+        {/* Second Card */}
+        <Card className="w-[320px] flex-shrink-0 shadow-lg rounded-lg">
           <CardHeader className="flex justify-between items-center">
             <div>
-              <CardTitle>ZOHO CRM</CardTitle>
-              <CardDescription>Zoho Corporation</CardDescription>
+              <CardTitle className="text-lg font-bold text-gray-900">ZOHO CRM</CardTitle>
+              <CardDescription className="text-gray-500">Zoho Corporation</CardDescription>
             </div>
             <img
               src="images/ZohoCRM/zoho.png" // Replace with actual image path
               alt="Zoho Logo"
-              className="w-10 h-10"
+              className="w-12 h-12"
             />
           </CardHeader>
-          <CardContent className="flex flex-col space-y-4 justify-center">
+          <CardContent className="flex flex-col space-y-4">
             <div className="flex space-x-2 justify-center">
               <Badge
                 variant="outline"
-                className="text-gray-700 border-gray-300"
+                className="text-gray-700 border-gray-300 px-4 py-2"
               >
                 FEATURES
               </Badge>
               <Badge
                 variant="outline"
-                className="text-gray-700 border-gray-300"
+                className="text-gray-700 border-gray-300 px-4 py-2"
               >
                 PLANS
               </Badge>
             </div>
 
-            <Button variant="outline" className="w-full border border-gray-700">
+            <Button variant="outline" className="w-full border border-gray-700 py-2">
               GET FREE DEMO
             </Button>
           </CardContent>
-          <CardFooter className="flex gap-6 text-center justify-center">
-            <div>
-              <p className=" text-gray-600">Starting at</p>
-              <p className=" font-semibold">$1350</p>
+          <CardFooter className="flex flex-col items-center space-y-2 text-center">
+            <div className="text-gray-600">
+              <p>Starting at</p>
+              <p className="text-lg font-semibold">$1350</p>
             </div>
-            <Button variant="secondary" className="mt-2">
+            <Button variant="secondary" className="py-2 px-4">
               Prize On Request
             </Button>
           </CardFooter>
         </Card>
 
-        <Card className="w-[350px] flex-shrink-0 shadow-md">
+        {/* Third Card */}
+        <Card className="w-[320px] flex-shrink-0 shadow-lg rounded-lg">
           <CardHeader className="flex justify-between items-center">
             <div>
-              <CardTitle>ZOHO CRM</CardTitle>
-              <CardDescription>Zoho Corporation</CardDescription>
+              <CardTitle className="text-lg font-bold text-gray-900">ZOHO CRM</CardTitle>
+              <CardDescription className="text-gray-500">Zoho Corporation</CardDescription>
             </div>
             <img
               src="images/ZohoCRM/zoho.png" // Replace with actual image path
               alt="Zoho Logo"
-              className="w-10 h-10"
+              className="w-12 h-12"
             />
           </CardHeader>
-          <CardContent className="flex flex-col space-y-4 justify-center">
+          <CardContent className="flex flex-col space-y-4">
             <div className="flex space-x-2 justify-center">
               <Badge
                 variant="outline"
-                className="text-gray-700 border-gray-300"
+                className="text-gray-700 border-gray-300 px-4 py-2"
               >
                 FEATURES
               </Badge>
               <Badge
                 variant="outline"
-                className="text-gray-700 border-gray-300"
+                className="text-gray-700 border-gray-300 px-4 py-2"
               >
                 PLANS
               </Badge>
             </div>
 
-            <Button variant="outline" className="w-full border border-gray-700">
+            <Button variant="outline" className="w-full border border-gray-700 py-2">
               GET FREE DEMO
             </Button>
           </CardContent>
-          <CardFooter className="flex gap-6 text-center justify-center">
-            <div>
-              <p className=" text-gray-600">Starting at</p>
-              <p className=" font-semibold">$1350</p>
+          <CardFooter className="flex flex-col items-center space-y-2 text-center">
+            <div className="text-gray-600">
+              <p>Starting at</p>
+              <p className="text-lg font-semibold">$1350</p>
             </div>
-            <Button variant="secondary" className="mt-2">
-              Prize On Request
-            </Button>
-          </CardFooter>
-        </Card>
-
-        <Card className="w-[350px] flex-shrink-0 shadow-md">
-          <CardHeader className="flex justify-between items-center">
-            <div>
-              <CardTitle>ZOHO CRM</CardTitle>
-              <CardDescription>Zoho Corporation</CardDescription>
-            </div>
-            <img
-              src="images/ZohoCRM/zoho.png" // Replace with actual image path
-              alt="Zoho Logo"
-              className="w-10 h-10"
-            />
-          </CardHeader>
-          <CardContent className="flex flex-col space-y-4 justify-center">
-            <div className="flex space-x-2 justify-center">
-              <Badge
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                FEATURES
-              </Badge>
-              <Badge
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                PLANS
-              </Badge>
-            </div>
-
-            <Button variant="outline" className="w-full border border-gray-700">
-              GET FREE DEMO
-            </Button>
-          </CardContent>
-          <CardFooter className="flex gap-6 text-center justify-center">
-            <div>
-              <p className=" text-gray-600">Starting at</p>
-              <p className=" font-semibold">$1350</p>
-            </div>
-            <Button variant="secondary" className="mt-2">
-              Prize On Request
-            </Button>
-          </CardFooter>
-        </Card>
-
-        <Card className="w-[350px] flex-shrink-0 shadow-md">
-          <CardHeader className="flex justify-between items-center">
-            <div>
-              <CardTitle>ZOHO CRM</CardTitle>
-              <CardDescription>Zoho Corporation</CardDescription>
-            </div>
-            <img
-              src="images/ZohoCRM/zoho.png" // Replace with actual image path
-              alt="Zoho Logo"
-              className="w-10 h-10"
-            />
-          </CardHeader>
-          <CardContent className="flex flex-col space-y-4 justify-center">
-            <div className="flex space-x-2 justify-center">
-              <Badge
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                FEATURES
-              </Badge>
-              <Badge
-                variant="outline"
-                className="text-gray-700 border-gray-300"
-              >
-                PLANS
-              </Badge>
-            </div>
-
-            <Button variant="outline" className="w-full border border-gray-700">
-              GET FREE DEMO
-            </Button>
-          </CardContent>
-          <CardFooter className="flex gap-6 text-center justify-center">
-            <div>
-              <p className=" text-gray-600">Starting at</p>
-              <p className=" font-semibold">$1350</p>
-            </div>
-            <Button variant="secondary" className="mt-2">
+            <Button variant="secondary" className="py-2 px-4">
               Prize On Request
             </Button>
           </CardFooter>

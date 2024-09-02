@@ -1,42 +1,65 @@
-import React from 'react'
+import React from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-import { Icon } from 'lucide-react';
+import { FaSearch } from 'react-icons/fa';
+import { BsCart } from 'react-icons/bs';
+import { AiOutlineUser } from 'react-icons/ai';
 import Image from 'next/image';
-import { FaSearch } from "react-icons/fa";
 
 const Nav = () => {
   return (
-    <>
-        <nav className=" h-12 flex items-center justify-between p-4 bg-white shadow-md">
-          <div className="flex items-center space-x-2">
-            <Image
-              src="/images/logo.png"
-              alt="Telcokart Logo"
-              className="h-8"
-              height={25}
-              width={30}
-            />
-            <span className="text-xl font-bold">Telcokart</span>
-          </div>
+    <nav className="bg-white shadow-lg p-4">
+      <div className="container mx-auto flex items-center justify-between">
+        {/* Logo and Branding */}
+        <div className="flex items-center space-x-4">
+          <Image
+            src="/images/logo.png"
+            alt="Telcokart Logo"
+            className="h-8"
+            height={100}
+            width={35}
+          />
+<h1 className="text-2xl font-bold text-blue-600 font-montserrat">Telcokart</h1>
+        </div>
 
-          <div className="flex items-center w-1/2 h-1/2 mx-3">
+        {/* Search Bar */}
+        <div className="flex items-center bg-gray-200 p-2 rounded-md flex-grow mx-8">
+          <Input
+            className="bg-transparent border-none focus:outline-none flex-grow"
+            placeholder="Search for Products, Brands and More"
+          />
+          <Button className="bg-blue-500 text-white px-4 py-2 rounded-md">
             <FaSearch />
-            <Input
-              type="text"
-              placeholder="Search the product"
-              className="flex-1  rounded-md p-2 outline-none"
-            />
-          </div>
+          </Button>
+        </div>
 
+        {/* Links and Icons */}
+        <div className="flex items-center space-x-8 text-gray-700">
           <div className="flex space-x-4">
-            <a>Advertise</a>
-            <a>List Business</a>
-            <a>Get Advice</a>
+            <Button variant="link" className="hover:text-blue-600">
+              Advertise
+            </Button>
+            <Button variant="link" className="hover:text-blue-600">
+              List Business
+            </Button>
+            <Button variant="link" className="hover:text-blue-600">
+              Get Advice
+            </Button>
           </div>
-        </nav>
-    </>
+          <div className="flex space-x-6">
+            <Button variant="ghost" className="hover:text-blue-600">
+              <AiOutlineUser className="text-xl" />
+              <span>Login</span>
+            </Button>
+            <Button variant="ghost" className="hover:text-blue-600">
+              <BsCart className="text-xl" />
+              <span>Cart</span>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
-}
+};
 
-export default Nav
+export default Nav;
