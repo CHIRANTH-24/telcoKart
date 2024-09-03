@@ -6,7 +6,7 @@ export function Display() {
   return (
     <AspectRatio ratio={16 / 9} className="">
       <Image
-        src="/images/airpod.png"
+        src="/images/airpods.png"
         alt="Photo by Drew Beamer"
         fill
         className="h-full w-full rounded-md object-cover"

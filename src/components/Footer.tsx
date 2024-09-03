@@ -1,10 +1,11 @@
-import  Link  from 'next/link';
+import Link from 'next/link';
 import React from 'react';
+
 const Footer = () => {
   return (
     <div>
-      <footer className="custom-class text-white py-8">
-        <div className="px-4 ">
+      <footer className="bg-[#1b1b1b] text-white py-8">
+        <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between gap-8">
             <div className="flex-1 max-w-[200px]">
               <h6 className="text-lg font-semibold mb-4 text-white">Know Us</h6>
@@ -15,150 +16,169 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/team">
+                  <Link className="hover:underline text-white" href="/team">
                     Our Team
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/careers">
+                  <Link className="hover:underline text-white" href="/careers">
                    Careers
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/press">
+                  <Link className="hover:underline text-white" href="/press">
                    Press
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/contact">
+                  <Link className="hover:underline text-white" href="/contact">
                    Contact Us
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="flex-1 max-w-[200px]">
-              <h6 className="text-lg font-semibold mb-4">Quick Links</h6>
+              <h6 className="text-lg font-semibold mb-4 text-white">Quick Links</h6>
               <ul className="space-y-2">
                 <li>
-                  <Link className="hover:underline" href="/home">
+                  <Link className="hover:underline text-white" href="/home">
                    Home
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/services">
+                  <Link className="hover:underline text-white" href="/services">
                    Services
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/pricing">
+                  <Link className="hover:underline text-white" href="/pricing">
                    Pricing
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/blog">
+                  <Link className="hover:underline text-white" href="/blog">
                    Blog
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/faq">
+                  <Link className="hover:underline text-white" href="/faq">
                    FAQ
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="flex-1 max-w-[200px]">
-              <h6 className="text-lg font-semibold mb-4">For Business</h6>
+              <h6 className="text-lg font-semibold mb-4 text-white">For Business</h6>
               <ul className="space-y-2">
                 <li>
-                  <Link className="hover:underline" href="/solutions">
+                  <Link className="hover:underline text-white" href="/solutions">
                    Solutions
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/case-studies">
+                  <Link className="hover:underline text-white" href="/case-studies">
                    Case Studies
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/enterprise">
+                  <Link className="hover:underline text-white" href="/enterprise">
                    Enterprise
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/partners">
+                  <Link className="hover:underline text-white" href="/partners">
                    Partners
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline" href="/contact-sales">
+                  <Link className="hover:underline text-white" href="/contact-sales">
                    Contact Sales
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="flex-1 max-w-[200px]">
-              <h6 className="text-lg font-semibold mb-4">For Startups</h6>
+              <h6 className="text-lg font-semibold mb-4 text-white">For Startups</h6>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/startup-resources">
+                  <Link className="hover:underline text-white" href="/startup-resources">
                    Resources
                   </Link>
                 </li>
                 <li>
-                  <Link href="/mentorship">
+                  <Link className="hover:underline text-white" href="/mentorship">
                    Mentorship
                   </Link>
                 </li>
                 <li>
-                  <Link href="/incubators">
+                  <Link className="hover:underline text-white" href="/incubators">
                    Incubators
                   </Link>
                 </li>
                 <li>
-                  <Link href="/grants">
+                  <Link className="hover:underline text-white" href="/grants">
                    Grants
                   </Link>
                 </li>
                 <li>
-                  <Link href="/startup-events">
+                  <Link className="hover:underline text-white" href="/startup-events">
                    Events
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="flex-1 max-w-[200px]">
-              <h6 className="text-lg font-semibold mb-4">Quick Connects</h6>
+              <h6 className="text-lg font-semibold mb-4 text-white">Quick Connects</h6>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/social-media">
+                  <Link className="hover:underline text-white" href="/social-media">
                    Social Media
                   </Link>
                 </li>
                 <li>
-                  <Link href="/newsletter">
+                  <Link className="hover:underline text-white" href="/newsletter">
                    Newsletter
                   </Link>
                 </li>
                 <li>
-                  <Link href="/feedback">
+                  <Link className="hover:underline text-white" href="/feedback">
                    Feedback
                   </Link>
                 </li>
                 <li>
-                  <Link href="/support">
+                  <Link className="hover:underline text-white" href="/support">
                    Support
                   </Link>
                 </li>
                 <li>
-                  <Link href="/community">Community</Link>
+                  <Link className="hover:underline text-white" href="/community">
+                   Community
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+        <div className="mt-8 px-4 border-t border-gray-700 pt-4">
+  <p className="text-sm text-center text-gray-400">
+    &copy; 2024 TelcoKart. All rights reserved.
+  </p>
+  <p className="text-sm text-center text-gray-400 mt-2">
+    Developed by{" "}
+    <a
+      href="https://www.linkedin.com/company/novus-webspace-technologies"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-500 hover:underline"
+    >
+      Novus Webspace Technologies
+    </a>
+  </p>
+</div>
+
       </footer>
     </div>
   );
 }
 
-export default Footer
+export default Footer;

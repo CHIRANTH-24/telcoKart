@@ -25,7 +25,7 @@ const products = [
 
 export default function PopularSat() {
   return (
-    <div className="w-full p-4 space-y-4 justify-center ">
+    <div className="w-full p-10 space-y-6 justify-center ">
       <h2 className="text-2xl font-bold mb-4">Popular Satellite Services</h2>
       <div className="flex flex-col md:flex-row gap-4">
         <div className="mr-10 ">
@@ -100,10 +100,10 @@ export default function PopularSat() {
           </div>
           <div className="relative h-48 bg-blue-100 rounded-lg overflow-hidden">
             <Image
-              src="/images/cctv.jpg"
+              src="/images/cctv1.jpg"
               alt="CCTV Cameras"
               className="w-full h-full object-cover"
-              width={120}
+              width={60}
               height={400}
             />
             <div className="absolute inset-0 flex items-center justify-center">
