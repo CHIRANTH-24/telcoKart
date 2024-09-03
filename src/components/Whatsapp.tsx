@@ -40,8 +40,8 @@ const columns = [
 
 export default function Whatsapp() {
   return (
-    <div className="flex justify-center">
-      <Card className="w-full">
+    <div className="flex justify-center p-6">
+      <Card className="w-full max-w-4xl p-4 shadow-lg">
         <CardHeader className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <div className="flex items-center space-x-2">
             <Phone className="h-8 w-8 text-green-500" />
@@ -49,12 +49,12 @@ export default function Whatsapp() {
               WhatsApp Business API
             </CardTitle>
           </div>
-          <Button className="bg-green-600 hover:bg-green-700">
+          <Button className="bg-green-600 hover:bg-green-700 text-sm px-4 py-2">
             START 14-DAY FREE TRIAL
           </Button>
         </CardHeader>
         <CardContent className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {columns.map((column, index) => (
               <div key={index} className="space-y-2">
                 <h3 className="text-lg font-semibold">{column.title}</h3>
@@ -69,13 +69,13 @@ export default function Whatsapp() {
             ))}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Button className="w-full bg-green-600 hover:bg-green-700">
+            <Button className="w-full bg-green-600 hover:bg-green-700 text-sm px-4 py-2">
               Become Partner
             </Button>
-            <Button className="w-full bg-green-600 hover:bg-green-700">
-              Apply for WhatsApp Business API FREE
+            <Button className="w-full bg-green-600 hover:bg-green-700 text-sm px-4 py-2">
+              WhatsApp Business API FREE
             </Button>
-            <Button className="w-full bg-green-600 hover:bg-green-700">
+            <Button className="w-full bg-green-600 hover:bg-green-700 text-sm px-4 py-2">
               Get Whitelabel Soln
             </Button>
           </div>
