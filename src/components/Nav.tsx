@@ -8,22 +8,22 @@ import Image from 'next/image';
 
 const Nav = () => {
   return (
-    <nav className="bg-white shadow-lg p-4">
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className="flex shadow-lg p-4 w-full h-11 overflow-y-clip">
+      <div className="container mx-auto flex items-center justify-start">
         {/* Logo and Branding */}
         <div className="flex items-center space-x-4">
           <Image
             src="/images/logo.png"
             alt="Telcokart Logo"
             className="h-8"
-            height={100}
-            width={35}
+            height={10}
+            width={30}
           />
 <h1 className="text-2xl font-bold text-blue-600 font-montserrat">Telcokart</h1>
         </div>
 
         {/* Search Bar */}
-        <div className="flex items-center bg-gray-200 p-2 rounded-md flex-grow mx-8">
+        <div className="flex items-center bg-gray-200 rounded-md flex-grow mx-8">
           <Input
             className="bg-transparent border-none focus:outline-none flex-grow"
             placeholder="Search for Products, Brands and More"

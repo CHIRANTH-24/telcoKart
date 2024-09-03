@@ -490,18 +490,18 @@ export default function Component() {
 
   return (
     <div className="px-2 py-4">
-      <div className=" flex    justify-between items-stretch  space-x-2 ">
+      <div className=" flex justify-center items-stretch ">
         {cardItems.map((item) => (
           <Card
             key={item.id}
-            className="flex-shrink-0 flex flex-col items-center justify-between p-2 h-20 w-20 sm:h-24 sm:w-24 outline-none shadow-none border-none"
+            className="flex-shrink-0 flex flex-col items-center justify-between p-2 h-15 w-15 sm:h-24 sm:w-24 outline-none shadow-none border-none"
           >
             <CardHeader className="flex flex-col items-center justify-between w-full p-0 space-y-1">
               <Image
                 src={item.logo}
                 alt={item.name}
-                width={42}
-                height={42}
+                width={32}
+                height={32}
                 className="mb-1"
               />
               <div className="flex flex-col items-center justify-between w-full">
