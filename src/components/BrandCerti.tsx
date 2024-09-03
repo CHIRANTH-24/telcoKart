@@ -25,7 +25,7 @@ export default function BrandCerti() {
   return (
     <>
       <h2
-        className="text-2xl font-bold mb-4 px-2 py-10"
+        className="pl-4 text-2xl font-bold mb-4 px-2 py-10"
       >
         Business Certification
       </h2>

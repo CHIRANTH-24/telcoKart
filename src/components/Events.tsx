@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
+import Image from "next/image";
 
 const events = [
   {
@@ -79,11 +80,13 @@ export default function Events() {
           WEBINAR
         </Badge>
       </div>
-      <div className="w-full flex justify-center overflow-x-auto space-x-6 pb-4">
+      <div className="w-full flex justify-center space-x-6 pb-4">
         {events.map((event, index) => (
-          <Card key={index} className="flex-shrink-0 w-64 shadow-lg">
+          <Card key={index} className="flex-shrink-0 w-1/4 shadow-lg">
             <CardHeader className="p-0">
-              <img
+              <Image
+                width={200 }
+                height={300}
                 src={event.image}
                 alt={event.name}
                 className="w-full h-40 object-cover rounded-t-lg"

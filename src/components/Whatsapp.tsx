@@ -41,7 +41,7 @@ const columns = [
 export default function Whatsapp() {
   return (
     <div className="flex justify-center p-6">
-      <Card className="w-full max-w-4xl p-4 shadow-lg">
+      <Card className="w-full  p-4 shadow-lg content-between">
         <CardHeader className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <div className="flex items-center space-x-2">
             <Phone className="h-8 w-8 text-green-500" />
@@ -53,7 +53,7 @@ export default function Whatsapp() {
             START 14-DAY FREE TRIAL
           </Button>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6 content-between">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {columns.map((column, index) => (
               <div key={index} className="space-y-2">
@@ -68,7 +68,7 @@ export default function Whatsapp() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             <Button className="w-full bg-green-600 hover:bg-green-700 text-sm px-4 py-2">
               Become Partner
             </Button>
