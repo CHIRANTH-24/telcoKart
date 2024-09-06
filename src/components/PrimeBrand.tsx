@@ -51,7 +51,6 @@ export default function Component() {
                     </div>
                     <div className="p-3">
                       <Button
-                        variant="primary"
                         className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-md transition-colors"
                       >
                         Add to Cart
