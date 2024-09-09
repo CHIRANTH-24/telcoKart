@@ -21,7 +21,7 @@ const images = [
 ];
 const extendedImages = [...images, ...images].slice(0, 8);
 
-export default function Component() {
+export default function PrimeBrand() {
   return (
     <div className="w-full p-6 space-y-6">
       <h2 className="text-2xl font-bold mb-4">Apple for Business</h2>

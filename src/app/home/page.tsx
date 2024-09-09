@@ -1,9 +1,9 @@
-"use client";
+'use client';
 import BrandCerti from "@/components/BrandCerti";
 import Events from "@/components/Events";
 import Footer from "@/components/Footer";
 import MainCategory from "@/components/MainCategory";
-import Nav from "@/components/Nav";
+import Nav  from "@/components/Nav";
 import PopularSat from "@/components/PopularSat";
 import AppleForBusiness from "@/components/AppleForBusiness";
 import Show from "@/components/Show";
@@ -13,7 +13,7 @@ import Whatsapp from "@/components/Whatsapp";
 import { Satellite } from "lucide-react";
 
 import React from "react";
-import { PrimeBrand } from "@/components/PrimeBrand";
+import PrimeBrand from "@/components/PrimeBrand";
 
 function page() {
   const images = ["/images/slider.png", "/images/cctv.jpg"];
