@@ -14,7 +14,11 @@ const Nav = () => {
   };
 
   return (
+<<<<<<< HEAD
     <nav className="bg-white shadow-lg p-3">
+=======
+    <nav className="bg-white shadow-lg p-4">
+>>>>>>> parent of bfebc21 (nav style)
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo and Branding */}
         <div className="flex items-center space-x-4">
@@ -22,8 +26,8 @@ const Nav = () => {
             src="/images/logo.png"
             alt="Telcokart Logo"
             className="h-8"
-            height={10}
-            width={30}
+            height={100}
+            width={35}
           />
           <h1 className="text-2xl font-bold text-blue-600 font-montserrat">
             Telcokart
@@ -31,7 +35,7 @@ const Nav = () => {
         </div>
 
         {/* Search Bar */}
-        <div className="flex items-center bg-gray-200 rounded-md flex-grow mx-8">
+        <div className="flex items-center bg-gray-200 p-2 rounded-md flex-grow mx-8">
           <Input
             className="bg-transparent border-none focus:outline-none flex-grow"
             placeholder="Search for Products, Brands and More"
