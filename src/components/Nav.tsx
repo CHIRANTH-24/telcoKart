@@ -14,11 +14,7 @@ const Nav = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <nav className="bg-white shadow-lg p-3">
-=======
     <nav className="bg-white shadow-lg p-4">
->>>>>>> parent of bfebc21 (nav style)
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo and Branding */}
         <div className="flex items-center space-x-4">
