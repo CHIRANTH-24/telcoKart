@@ -20,9 +20,10 @@ function page() {
   const images = [
     "/images/caro1.webp",
     "/images/caro2.webp",
+    "/images/slider.png", "/images/cctv.jpg"
   ];
 
-  const images = ["/images/slider.png", "/images/cctv.jpg"];
+  
 
   return (
     <>
