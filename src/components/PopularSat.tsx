@@ -17,15 +17,15 @@ import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
 const products = [
-  { name: "M19 Earbuds", image: "/images/earpode.jpg" },
-  { name: "Hair Clippers", image: "/images/earpode.jpg" },
-  { name: "Malhotra Watch", image: "/images/earpode.jpg" },
-  { name: "HiWatch Watch", image: "/images/earpode.jpg" },
+  { name: "M19 Earbuds", image: "/images/airpods.webp" },
+  { name: "Hair Clippers", image: "/images/airpods.webp" },
+  { name: "Malhotra Watch", image: "/images/airpods.webp" },
+  { name: "HiWatch Watch", image: "/images/airpods.webp" },
 ];
 
 export default function PopularSat() {
   return (
-    <div className="w-full p-10 space-y-6 justify-center ">
+    <div className="w-full p-10 space-y-8 justify-center ">
       <h2 className="text-2xl font-bold mb-4">Popular Satellite Services</h2>
       <div className="flex flex-col md:flex-row gap-4">
         <div className="mr-10 ">
@@ -36,7 +36,7 @@ export default function PopularSat() {
             // }}
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 4000,
               }),
             ]}
             className="max-w-sm w-full"
@@ -55,7 +55,7 @@ export default function PopularSat() {
                             alt="Image"
                             className="object-cover"
                           />
-                          <Button className="w-full mt-2 ">Login</Button>
+                          
                         </CardContent>
                       </Card>
                     ))}
@@ -70,7 +70,7 @@ export default function PopularSat() {
                             width={150}
                             alt="Image"
                           />
-                          <Button className="w-full mt-2 ">Login</Button>
+                          
                         </CardContent>
                       </Card>
                     ))}
@@ -85,7 +85,7 @@ export default function PopularSat() {
         <div className="w-full space-y-4">
           <div className="relative h-48  rounded-lg overflow-hidden">
             <Image
-              src="/images/slider.png"
+              src="/images/hotel1.jpg"
               alt="Book Hotels"
               className="w-full object-cover"
               width={120}

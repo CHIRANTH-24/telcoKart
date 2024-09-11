@@ -16,7 +16,14 @@ import React from "react";
 import PrimeBrand from "@/components/PrimeBrand";
 
 function page() {
+
+  const images = [
+    "/images/caro1.webp",
+    "/images/caro2.webp",
+  ];
+
   const images = ["/images/slider.png", "/images/cctv.jpg"];
+
   return (
     <>
       <Nav />
