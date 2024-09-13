@@ -11,7 +11,6 @@ import Softwarecard from "@/components/Softwarecard";
 import Subscribe from "@/components/Subscribe";
 import Whatsapp from "@/components/Whatsapp";
 import { Satellite } from "lucide-react";
-
 import React from "react";
 import PrimeBrand from "@/components/PrimeBrand";
 
@@ -22,8 +21,6 @@ function page() {
     "/images/caro2.webp",
     "/images/slider.png", "/images/cctv.jpg"
   ];
-
-  
 
   return (
     <>

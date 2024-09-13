@@ -163,7 +163,7 @@ const gigCommunityItems = [
   "Get Paid",
 ];
 
-export default function Component() {
+export default function   Component() {
   const renderDropdownItems = (items: string[]) =>
     items.map((subItem, index) => (
       <DropdownMenuSub key={index}>
@@ -490,7 +490,7 @@ export default function Component() {
 
   return (
     <div className="px-2 py-4">
-      <div className=" flex    justify-between items-stretch  space-x-2 ">
+      <div className=" flex justify-between items-stretch  space-x-2 ">
         {cardItems.map((item) => (
           <Card
             key={item.id}
