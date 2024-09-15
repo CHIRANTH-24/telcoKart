@@ -2,7 +2,12 @@ import { ResponseBody } from "@/util/api-response";
 import Axios, { AxiosError, AxiosRequestConfig } from "axios";
 import { toast } from "sonner";
 
-export const BASE_URL = "http://localhost:3000/api/";
+const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
+if (!SERVER_URL) {
+  console.error("Server URL is not defined in env!!");
+  process.exit(0);
+}
+export const BASE_URL = `${SERVER_URL}/api/`;
 
 export const axiosInstance = Axios.create({
   baseURL: BASE_URL,
