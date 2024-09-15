@@ -5,6 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { BsCart } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import Image from "next/image";
+import Link from "next/link";
 
 const Nav = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -89,12 +90,14 @@ const Nav = () => {
                 {/* Ensured it's over all elements */}
                 <ul>
                   <li>
-                    <Button
-                      variant="link"
-                      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-                    >
-                      New customer? Sign up
-                    </Button>
+                    <Link href="/register">
+                      <Button
+                        variant="link"
+                        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                      >
+                        New customer? Sign up
+                      </Button>
+                    </Link>
                   </li>
                   <li>
                     <Button
