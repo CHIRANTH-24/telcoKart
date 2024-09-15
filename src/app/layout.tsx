@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../styles/globals.css";
+import "@/styles/globals.css";
+import AppProvider from "@/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TelcoKart",
-  description: "ECommerce of Tomorrow",
+  title: {
+    default: "Telcokart", //for home page
+    template: `%s | Telcokart`, //for child pages
+  },
+  description: "A B2B app",
 };
 
 export default function RootLayout({
@@ -16,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AppProvider>{children}</AppProvider>
+      </body>
     </html>
   );
 }
