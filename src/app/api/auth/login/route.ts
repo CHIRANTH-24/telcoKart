@@ -3,11 +3,7 @@ import { compare } from "bcryptjs";
 import { db } from "@/lib/db";
 import { LoginSchema } from "@/lib/zod";
 import { apiResponse } from "@/util/api-response";
-import {
-  COOKIE_NAME,
-  COOKIE_OPTIONS,
-  generateAccessToken,
-} from "@/util/auth";
+import { COOKIE_NAME, COOKIE_OPTIONS, generateAccessToken } from "@/util/auth";
 import { displayUser } from "@/util/user";
 
 export async function POST(req: NextRequest) {

@@ -20,6 +20,8 @@ import { useRouter } from "next/navigation";
 import axios from "@/lib/axios";
 import { toast } from "sonner";
 import { useState } from "react";
+import { useAuthStore } from "@/state/auth-state";
+import { User } from "@/types";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -31,12 +33,13 @@ export default function LoginForm() {
     resolver: zodResolver(LoginSchema),
   });
 
+  const { authenticate } = useAuthStore((state) => state);
   const [verificationError, setVerificationError] = useState({ userId: "" });
 
   const { isLoading, mutate } = useMutation({
     mutationKey: ["login"],
     mutationFn: async (values: LoginSchema) => {
-      const { data, error } = await axios({
+      const { data, error } = await axios<User>({
         method: "post",
         endpoint: "/auth/login",
         body: values,
@@ -44,8 +47,9 @@ export default function LoginForm() {
       });
 
       if (data?.data) {
+        authenticate(data.data!);
         toast.success(data.message);
-        router.replace("/");
+        router.replace("/home");
       }
       if (error?.data && error.data.verificationError) {
         console.log(error);

@@ -25,7 +25,7 @@ export async function getUser({
 }
 
 /** Omits password from user */
-export async function displayUser(user: User) {
+export function displayUser(user: User) {
   const { password, ...displayUser } = user;
   return displayUser;
 }

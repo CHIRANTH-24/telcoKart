@@ -20,7 +20,7 @@ export async function generateAccessToken(payload: any) {
 export async function verifyToken(token: string) {
   const payload = verify(token, JWT_SECRET, {
     algorithms: ["HS256"],
-  }) as JwtPayload;
+  }) as { id: string; email: string };
   return payload;
 }
 

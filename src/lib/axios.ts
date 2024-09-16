@@ -45,6 +45,7 @@ async function axios<T = any>({
       config
     );
     data = res.data;
+    
   } catch (err: any) {
     console.log("Axios Error: ", err);
     if (err instanceof AxiosError) {

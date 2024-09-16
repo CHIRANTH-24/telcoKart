@@ -2,13 +2,19 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { FaSearch } from "react-icons/fa";
-import { BsCart } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
+import { useAuthStore } from "@/state/auth-state";
+import { Loader } from "lucide-react";
+import { useAuthContext } from "@/providers/auth-provider";
 
 const Nav = () => {
+  const { isAuthenticated, user } = useAuthStore((state) => state);
+  const {isLoading} = useAuthContext()
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  console.log(user);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -58,47 +64,57 @@ const Nav = () => {
 
           {/* Login Dropdown */}
           <div className="relative z-50">
-            {" "}
-            {/* Added z-50 for positioning above other elements */}
-            <Button
-              variant="ghost"
-              className="hover:text-blue-600 flex items-center"
-              onClick={toggleDropdown}
-            >
-              <AiOutlineUser className="text-xl" />
-              <span className="ml-2">Login</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-4 h-4 ml-1"
+            {isLoading ? (
+              <Loader className="w-4 h-4 animate-spin" />
+            ) : (
+              <Button
+                variant="ghost"
+                className="hover:text-blue-600 flex items-center"
+                onClick={toggleDropdown}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 9l6 6 6-6"
-                />
-              </svg>{" "}
-              {/* Added arrow icon */}
-            </Button>
+                <AiOutlineUser className="text-xl" />
+                {isAuthenticated ? (
+                  <p>{user?.firstname + " " + user?.lastname}</p>
+                ) : (
+                  <>
+                    <span className="ml-2">Login</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-4 h-4 ml-1"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M6 9l6 6 6-6"
+                      />
+                    </svg>{" "}
+                  </>
+                )}
+                {/* Added arrow icon */}
+              </Button>
+            )}
             {/* Dropdown Menu */}
             {dropdownOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-50">
                 {" "}
                 {/* Ensured it's over all elements */}
                 <ul>
-                  <li>
-                    <Link href="/register">
-                      <Button
-                        variant="link"
-                        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-                      >
-                        New customer? Sign up
-                      </Button>
-                    </Link>
-                  </li>
+                  {!isAuthenticated && (
+                    <li>
+                      <Link href="/register">
+                        <Button
+                          variant="link"
+                          className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                        >
+                          New customer? Sign up
+                        </Button>
+                      </Link>
+                    </li>
+                  )}
                   <li>
                     <Button
                       variant="link"
