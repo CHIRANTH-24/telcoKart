@@ -21,8 +21,8 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg p-4">
-      <div className="container mx-auto flex items-center justify-between">
+    <div className="bg-white shadow-lg p-0 max-h-16">
+      <div className="container flex items-center justify-between pt-0 h-10 ">
         {/* Logo and Branding */}
         <div className="flex items-center space-x-4">
           <Image
@@ -38,12 +38,14 @@ const Nav = () => {
         </div>
 
         {/* Search Bar */}
-        <div className="flex items-center bg-gray-200 p-2 rounded-md flex-grow mx-8">
+        <div className="flex items-center p-2 rounded-md flex-grow mx-8 max-h-8">
           <Input
             className="bg-transparent border-none focus:outline-none flex-grow"
             placeholder="Search for Products, Brands and More"
           />
-          <Button className="bg-blue-500 text-white px-4 py-2 rounded-md">
+          <Button className="bg-white-500 text-
+          
+          px-4 py-2 rounded-md hover:none">
             <FaSearch />
           </Button>
         </div>
@@ -161,7 +163,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
