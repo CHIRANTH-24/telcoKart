@@ -489,14 +489,14 @@ export default function   Component() {
     ));
 
   return (
-    <div className="px-2 py-4">
-      <div className=" flex justify-between items-stretch  space-x-2 ">
+    <div className="px-2 py-4 max-h-24 pt-0 mt-2 flex justify-center">
+      <div className=" flex space-x-2 ">
         {cardItems.map((item) => (
           <Card
             key={item.id}
-            className="flex-shrink-0 flex flex-col items-center justify-between p-2 h-20 w-20 sm:h-24 sm:w-24 outline-none shadow-none border-none"
+            className="min-h-8  flex items-center justify-between p-2 h-20 w-20 sm:h-24 sm:w-24 outline-none shadow-none border-none"
           >
-            <CardHeader className="flex flex-col items-center justify-between w-full p-0 space-y-1">
+            <CardHeader className="flex flex-col items-center justify-between  p-0 space-y-1">
               <Image
                 src={item.logo}
                 alt={item.name}
@@ -504,13 +504,15 @@ export default function   Component() {
                 height={42}
                 className="mb-1"
               />
-              <div className="flex flex-col items-center justify-between w-full">
-                <p className="text-center text-[0.6rem] leading-tight font-bold">
-                  {item.name}
-                </p>
+              <div className="flex">
+                <div className="flex flex-col items-center justify-between w-full">
+                  <p className="text-center text-[0.6rem] leading-tight font-bold">
+                    {item.name}
+                  </p>
+                </div>
                 <DropdownMenu>
                   <DropdownMenuTrigger className="focus:outline-none">
-                    <ChevronDown className="text-gray-600 w-3 h-3 sm:w-4 sm:h-4" />
+                    <ChevronDown className="text-gray-600 w-3 h-3 sm:w-4 sm:h-4 pt-1" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     {item.name === "Mobility" &&
