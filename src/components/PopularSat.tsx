@@ -26,7 +26,7 @@ const products = [
 export default function PopularSat() {
   return (
     <div className="w-full p-10 space-y-8 justify-center ">
-      <h2 className="text-2xl font-bold mb-4">Popular Satellite Services</h2>
+      <h2 className="text-2xl font-bold mb-4 pl-0">Popular Satellite Services</h2>
       <div className="flex flex-col md:flex-row gap-4">
         <div className="mr-10 ">
           <Carousel
@@ -34,11 +34,11 @@ export default function PopularSat() {
             //   align: "start",
             //   loop: true,
             // }}
-            plugins={[
-              Autoplay({
-                delay: 4000,
-              }),
-            ]}
+            // plugins={[
+            //   Autoplay({
+            //     delay: 4000,
+            //   }),
+            // ]}
             className="max-w-sm w-full"
           >
             <CarouselContent className="w-fit mx-auto">
@@ -47,7 +47,7 @@ export default function PopularSat() {
                   <div className="p-1 flex items-center gap-2">
                     {products.slice(0, 2).map((product, index) => (
                       <Card key={index} className=" h-full ">
-                        <CardContent>
+                        <CardContent className="flex flex-col align-baseline space-y-3">
                           <Image
                             src={product.image}
                             height={150}
@@ -55,7 +55,7 @@ export default function PopularSat() {
                             alt="Image"
                             className="object-cover"
                           />
-                          
+                          <Button className="">Buy Now</Button>
                         </CardContent>
                       </Card>
                     ))}
@@ -63,14 +63,14 @@ export default function PopularSat() {
                   <div className="p-1 flex items-center gap-2">
                     {products.slice(2, 4).map((product, index) => (
                       <Card key={index} className="">
-                        <CardContent>
+                        <CardContent className="flex flex-col align-baseline space-y-3">
                           <Image
                             src={product.image}
                             height={150}
                             width={150}
                             alt="Image"
                           />
-                          
+                          <Button>Buy Now</Button>
                         </CardContent>
                       </Card>
                     ))}
@@ -82,7 +82,7 @@ export default function PopularSat() {
             <CarouselNext />
           </Carousel>
         </div>
-        <div className="w-full space-y-4">
+        <div className="w-full space-y-12">
           <div className="relative h-48  rounded-lg overflow-hidden">
             <Image
               src="/images/hotel1.jpg"
@@ -98,7 +98,7 @@ export default function PopularSat() {
               </h3>
             </div>
           </div>
-          <div className="relative h-48 bg-blue-100 rounded-lg overflow-hidden">
+          <div className="relative h-48 bg-blue-100 rounded-lg overflow-hidden ">
             <Image
               src="/images/cctv1.jpg"
               alt="CCTV Cameras"
