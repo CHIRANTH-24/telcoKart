@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ArrowLeft, ArrowRight, KeyRound, Loader, Mail } from "lucide-react";
+import { ArrowLeft, ArrowRight, KeyRound, Mail } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -38,26 +37,23 @@ export default function LoginForm() {
   const { authenticate } = useAuthStore((state) => state);
   const [verificationError, setVerificationError] = useState({ userId: "" });
 
-  const { isLoading, mutate } = useMutation({
-    mutationKey: ["login"],
-    mutationFn: async (values: LoginSchema) => {
-      const { data, error } = await axios<User>({
-        method: "post",
-        endpoint: "/auth/login",
-        body: values,
-        showErrorToast: true,
-      });
+  const { isLoading, mutate } = useMutation(async (values: LoginSchema) => {
+    const { data, error } = await axios<User>({
+      method: "post",
+      endpoint: "/auth/login",
+      body: values,
+      showErrorToast: true,
+    });
 
-      if (data?.data) {
-        authenticate(data.data!);
-        toast.success(data.message);
-        router.replace(callback ?? "/");
-      }
-      if (error?.data && error.data.verificationError) {
-        console.log(error);
-        setVerificationError({ userId: error.data.id });
-      }
-    },
+    if (data?.data) {
+      authenticate(data.data!);
+      toast.success(data.message);
+      router.replace(callback ?? "/");
+    }
+    if (error?.data && error.data.verificationError) {
+      console.log(error);
+      setVerificationError({ userId: error.data.id });
+    }
   });
 
   const verificationMuatation = useMutation(async () => {

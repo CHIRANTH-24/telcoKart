@@ -28,5 +28,6 @@ export async function GET(req: NextRequest) {
     if (error instanceof TokenExpiredError) {
       return apiResponse(401, { message: "Session expired" });
     }
+    return apiResponse(401, { message: "Session expired" });
   }
 }

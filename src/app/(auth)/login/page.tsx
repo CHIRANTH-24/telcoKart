@@ -1,10 +1,12 @@
 import { Metadata } from "next";
-import LoginForm from "./login-form";
+import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
-  title: "Login",
-  description: "Login page",
+  title: "Telcokart | Login",
+  description: "Login page of telcokart",
 };
+
+const LoginForm = dynamic(() => import("./login-form"), { ssr: false });
 
 export default async function LoginPage() {
   return (
