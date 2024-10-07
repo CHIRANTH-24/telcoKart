@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { COOKIE_NAME, COOKIE_OPTIONS, verifyToken } from "./util/auth";
 
-export default async function Middleware(req: NextRequest) {  
+export default async function Middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
   if (pathname.startsWith("/admin")) {
     try {
+      console.log(req.nextUrl.href , req.cookies);
       const token = req.cookies.get(COOKIE_NAME)?.value;
+      console.log(token);
       if (!token) throw new Error("Token missing!");
       await verifyToken(token!);
     } catch (error) {
