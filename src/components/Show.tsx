@@ -1,7 +1,6 @@
-// components/Show.tsx
-import React, { useState, useEffect, useCallback } from "react";
+"use client";
+
 import Image from "next/image";
-import { Button } from "./ui/button"; // Adjust import based on your UI library
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -12,31 +11,11 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-
 interface ShowProps {
   images: string[]; // Array of image URLs
 }
 
 const Show: React.FC<ShowProps> = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleImages, setVisibleImages] = useState<string[]>(images);
-
-  useEffect(() => {
-    setVisibleImages(images);
-  }, [images]);
-
-  const handlePrev = useCallback(() => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  }, [images.length]);
-
-  const handleNext = useCallback(() => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  }, [images.length]);
-
   return (
     <Carousel
       plugins={[
@@ -44,33 +23,26 @@ const Show: React.FC<ShowProps> = ({ images }) => {
           delay: 2000,
         }),
       ]}
+      className="overflow-hidden relative"
     >
-      <CarouselContent>
-        {visibleImages.map((img, index) => (
+      <CarouselContent className="p-0">
+        {images.map((img, index) => (
           <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex items-center justify-center p-6">
-                  <Image
-                    src={img}
-                    alt={`Product Image ${currentIndex + 1}`}
-                    objectFit="cover"
-                    className="rounded-lg w-full h-72"
-                    width={1000}
-                    height={1000}
-                  />
-                </CardContent>
-              </Card>
-            </div>
+            <Image
+              src={img}
+              alt={`Product Image ${index}`}
+              objectFit="cover"
+              className="rounded-lg w-full h-72"
+              width={1000}
+              height={1000}
+            />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="bg-white text-black absolute left-4" />
+      <CarouselNext className="bg-white text-black absolute right-4" />
     </Carousel>
   );
 };
 
 export default Show;
-
-

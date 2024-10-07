@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { LoginSchema } from "@/lib/zod";
 import { useMutation } from "react-query";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import axios from "@/lib/axios";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -25,6 +25,8 @@ import { User } from "@/types";
 
 export default function LoginForm() {
   const router = useRouter();
+  const searchparams = useSearchParams();
+  const callback = searchparams.get("callback");
   const form = useForm<LoginSchema>({
     defaultValues: {
       email: "",
@@ -49,7 +51,7 @@ export default function LoginForm() {
       if (data?.data) {
         authenticate(data.data!);
         toast.success(data.message);
-        router.replace("/home");
+        router.replace(callback ?? "/");
       }
       if (error?.data && error.data.verificationError) {
         console.log(error);

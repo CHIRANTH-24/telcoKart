@@ -10,7 +10,7 @@ const FourRectangularElements = () => {
     },
     {
       title: "Beauty & Spa",
-      image: "/images/beauty.jpg", // Replace with your actual image path
+      image: "/images/Beauty and Spa/beauty.jpg", // Replace with your actual image path
       alt: "Beauty",
     },
     {

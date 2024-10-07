@@ -23,7 +23,7 @@ function page() {
   ];
 
   return (
-    <>
+    <div className="max-w-screen-2xl mx-auto">
       <Nav />
       <MainCategory />
       <Show images={images} />
@@ -38,7 +38,7 @@ function page() {
       <PrimeBrand />
       <Subscribe />
       <Footer />
-    </>
+    </div>
   );
 }
 
