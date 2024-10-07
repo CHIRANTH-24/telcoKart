@@ -3,23 +3,33 @@ import { Category, Subcategory } from "@prisma/client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MainCategoryTab from "./maincategory-tab";
 import SubCategoryTab from "./subcategory-tab";
+import { db } from "@/lib/db";
 
 export default async function CategoryPage() {
-  const categoryPromise = axios<Category[]>({
-    method: "get",
-    endpoint: "/categories",
-  });
-  const subCategoryPromise = axios<Subcategory[]>({
-    method: "get",
-    endpoint: "/subcategories",
-  });
-  const [categoryResponse, subCategoryResponse] = await Promise.all([
+  // const categoryPromise = axios<Category[]>({
+  //   method: "get",
+  //   endpoint: "/categories",
+  // });
+  // const subCategoryPromise = axios<Subcategory[]>({
+  //   method: "get",
+  //   endpoint: "/subcategories",
+  // });
+
+  // const [categoryResponse, subCategoryResponse] = await Promise.all([
+  //   categoryPromise,
+  //   subCategoryPromise,
+  // ]);
+
+  // const categories = categoryResponse.data?.data || [];
+  // const subCategories = subCategoryResponse.data?.data || [];
+
+  const categoryPromise = db.category.findMany();
+  const subCategoryPromise = db.subcategory.findMany();
+
+  const [categories, subCategories] = await Promise.all([
     categoryPromise,
     subCategoryPromise,
   ]);
-
-  const categories = categoryResponse.data?.data || [];
-  const subCategories = subCategoryResponse.data?.data || [];
 
   return (
     <div className="h-full">
