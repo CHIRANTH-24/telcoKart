@@ -24,12 +24,11 @@ export default function AuthProvider({ children }: PropsWithChildren) {
       const { data, error } = await axios({
         method: "get",
         endpoint: "/auth/me",
-        showErrorToast: true,
       });
       if (data) {
         authenticate(data.data!);
       } else if (error) {
-        router.replace("/login");
+        // router.replace("/login");
       }
     },
   });

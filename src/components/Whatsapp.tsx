@@ -40,15 +40,13 @@ const columns = [
 
 export default function Whatsapp() {
   return (
-    <div className="flex justify-center p-6">
-      <Card className="w-full  p-4 shadow-lg content-between">
+    <section>
+      <Card className="w-full">
         <CardHeader className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-          <div className="flex items-center space-x-2">
+          <h4 className="flex items-center gap-2 text-2xl font-bold">
             <Phone className="h-8 w-8 text-green-500" />
-            <CardTitle className="text-2xl font-bold">
-              WhatsApp Business API
-            </CardTitle>
-          </div>
+            WhatsApp Business API
+          </h4>
           <Button className="bg-green-600 hover:bg-green-700 text-sm px-4 py-2">
             START 14-DAY FREE TRIAL
           </Button>
@@ -81,6 +79,6 @@ export default function Whatsapp() {
           </div>
         </CardContent>
       </Card>
-    </div>
+    </section>
   );
 }

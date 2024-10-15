@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -25,61 +27,50 @@ const products = [
 
 export default function PopularSat() {
   return (
-    <div className="w-full p-10 space-y-8 justify-center ">
-      <h2 className="text-2xl font-bold mb-4 pl-0">Popular Satellite Services</h2>
+    <div className="w-full space-y-8">
+      <h2 className="text-2xl font-bold mb-4">Popular Satellite Services</h2>
       <div className="flex flex-col md:flex-row gap-4">
         <div className="mr-10 ">
           <Carousel
-            // opts={{
-            //   align: "start",
-            //   loop: true,
-            // }}
-            // plugins={[
-            //   Autoplay({
-            //     delay: 4000,
-            //   }),
-            // ]}
-            className="max-w-sm w-full"
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
+            className="max-w-sm w-full relative"
           >
             <CarouselContent className="w-fit mx-auto">
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem key={index}>
                   <div className="p-1 flex items-center gap-2">
                     {products.slice(0, 2).map((product, index) => (
-                      <Card key={index} className=" h-full ">
-                        <CardContent className="flex flex-col align-baseline space-y-3">
-                          <Image
-                            src={product.image}
-                            height={150}
-                            width={150}
-                            alt="Image"
-                            className="object-cover"
-                          />
-                          <Button className="">Buy Now</Button>
-                        </CardContent>
-                      </Card>
+                      <Image
+                        key={index}
+                        src={product.image}
+                        height={100}
+                        width={100}
+                        alt="Image"
+                        className="object-cover"
+                      />
                     ))}
                   </div>
                   <div className="p-1 flex items-center gap-2">
                     {products.slice(2, 4).map((product, index) => (
-                      <Card key={index} className="">
-                        <CardContent className="flex flex-col align-baseline space-y-3">
-                          <Image
-                            src={product.image}
-                            height={150}
-                            width={150}
-                            alt="Image"
-                          />
-                          <Button>Buy Now</Button>
-                        </CardContent>
-                      </Card>
+                      <Image
+                        key={index}
+                        src={product.image}
+                        height={100}
+                        width={100}
+                        alt="Image"
+                        className="object-cover"
+                      />
                     ))}
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious variant={"secondary"} />
-            <CarouselNext />
+            <CarouselPrevious className="bg-white text-black absolute left-5" />
+            <CarouselNext className="bg-white text-black absolute right-5" />
           </Carousel>
         </div>
         <div className="w-full space-y-12">

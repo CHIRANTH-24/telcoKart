@@ -1,6 +1,6 @@
-import { JwtPayload, sign, verify } from "jsonwebtoken";
+import * as jose from "jose";
 
-const JWT_SECRET = process.env.JWT_SECRET!;
+const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET!);
 
 export const COOKIE_NAME = "__telkocart__";
 export const COOKIE_OPTIONS = {
@@ -10,18 +10,17 @@ export const COOKIE_OPTIONS = {
 };
 
 export async function generateAccessToken(payload: any) {
-  const token = sign(payload, JWT_SECRET, {
-    expiresIn: "1hr",
-    algorithm: "HS256",
-  });
+  const jwt = new jose.SignJWT(payload);
+  const token = jwt
+    .setProtectedHeader({ alg: "HS256" })
+    .setExpirationTime("1hr")
+    .sign(JWT_SECRET);
   return token;
 }
 
 export async function verifyToken(token: string) {
-  const payload = verify(token, JWT_SECRET, {
-    algorithms: ["HS256"],
-  }) as { id: string; email: string };
-  return payload;
+  const { payload } = await jose.jwtVerify(token, JWT_SECRET);
+  return payload as { id: string; email: string };
 }
 
 /** Generates random OTP

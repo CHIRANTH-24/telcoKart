@@ -31,3 +31,27 @@ model Verification {
 
   @@index([userId])
 }
+
+model Category {
+  id            String        @id @default(uuid()) @db.Uuid
+  name          String        @unique
+  description   String?
+  image         String?       @default("")
+  subCategories Subcategory[]
+}
+
+model Subcategory {
+  id          String   @id @default(uuid()) @db.Uuid
+  name        String   @unique
+  description String?
+  actions     Json
+  categoryId  String   @db.Uuid
+  image       String?  @default("")
+  category    Category @relation(fields: [categoryId], references: [id])
+}
+
+model Banner {
+  id       String @id @default(uuid()) @db.Uuid
+  image    String
+  priority Int
+}

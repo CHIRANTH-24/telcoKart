@@ -21,8 +21,8 @@ const Nav = () => {
   };
 
   return (
-    <div className="bg-white shadow-lg p-0 max-h-16">
-      <div className="container flex items-center justify-between pt-0 h-10 ">
+    <div className="bg-white shadow-lg py-2">
+      <div className="container flex items-center justify-between">
         {/* Logo and Branding */}
         <div className="flex items-center space-x-4">
           <Image

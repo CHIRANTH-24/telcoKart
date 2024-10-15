@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ArrowLeft, ArrowRight, KeyRound, Loader, Mail } from "lucide-react";
+import { ArrowLeft, ArrowRight, KeyRound, Mail } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -16,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { LoginSchema } from "@/lib/zod";
 import { useMutation } from "react-query";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import axios from "@/lib/axios";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -25,6 +24,8 @@ import { User } from "@/types";
 
 export default function LoginForm() {
   const router = useRouter();
+  const searchparams = useSearchParams();
+  const callback = searchparams.get("callback");
   const form = useForm<LoginSchema>({
     defaultValues: {
       email: "",
@@ -36,26 +37,23 @@ export default function LoginForm() {
   const { authenticate } = useAuthStore((state) => state);
   const [verificationError, setVerificationError] = useState({ userId: "" });
 
-  const { isLoading, mutate } = useMutation({
-    mutationKey: ["login"],
-    mutationFn: async (values: LoginSchema) => {
-      const { data, error } = await axios<User>({
-        method: "post",
-        endpoint: "/auth/login",
-        body: values,
-        showErrorToast: true,
-      });
+  const { isLoading, mutate } = useMutation(async (values: LoginSchema) => {
+    const { data, error } = await axios<User>({
+      method: "post",
+      endpoint: "/auth/login",
+      body: values,
+      showErrorToast: true,
+    });
 
-      if (data?.data) {
-        authenticate(data.data!);
-        toast.success(data.message);
-        router.replace("/home");
-      }
-      if (error?.data && error.data.verificationError) {
-        console.log(error);
-        setVerificationError({ userId: error.data.id });
-      }
-    },
+    if (data?.data) {
+      authenticate(data.data!);
+      toast.success(data.message);
+      router.replace(callback ?? "/");
+    }
+    if (error?.data && error.data.verificationError) {
+      console.log(error);
+      setVerificationError({ userId: error.data.id });
+    }
   });
 
   const verificationMuatation = useMutation(async () => {
